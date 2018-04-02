@@ -1,0 +1,102 @@
+<div ng-if="vm.isActive">
+&nbsp;
+	<div ng-if="vm.details.mode == 'attendance' && vm.details.data.attendance == 1">
+		<h1>Närvaroregistrering</h1>
+
+		<div class="row attendance">
+			<div class="col-md-12">
+				<div class="btn btn-primary btn-lg btn-block" ng-click="vm.checkin()">
+					Närvarande
+				</div>
+			</div>
+		</div>
+
+	</div>
+
+	<div ng-if="vm.details.mode == ''">
+
+		<div>
+			<button class="btn btn-block btn-lg btn-primary btn-custom" ng-click="vm.rightContentShowButtons = true" ng-if="!vm.rightContentShowButtons && !vm.isMinister">
+				<i class="fa fa-comment pull-left"></i> Begär taltur
+			</button>
+
+			<button class="btn btn-block btn-lg btn-primary btn-custom" ng-click="vm.rightContentShowButtons = false" ng-if="vm.rightContentShowButtons">
+				<i class="fa fa-list pull-left"></i> Visa talarlistan
+			</button>
+		</div>
+
+		<div ng-if="vm.seatingType == '1' && vm.rightContentShowButtons">
+			<h3>Begär taltur</h3>
+			<p ng-repeat="btn in vm.buttons">
+				<span ng-if="btn.speechMode == 'disabled'">
+					<button class="btn btn-block btn-lg btn-primary disabled btn-custom"
+							ng-show="btn.current_limit != 0"><i ng-class="btn.icon" class="pull-left"></i> {{ btn.title }}</button>
+				</span>
+				<span ng-if="btn.speechMode == 'clickable'">
+					<button class="btn btn-block btn-lg btn-primary btn-custom"
+							ng-show="btn.current_limit != 0" ng-click="vm.requestSpeech(btn)"><i ng-class="btn.icon" class="pull-left"></i> {{ btn.title }}</button>
+				</span>
+
+				<span ng-if="btn.speechMode == 'recallable'">
+					<button class="btn btn-block btn-lg btn-warning btn-custom"
+							ng-show="btn.current_limit != 0" ng-click="vm.removeSpeech(btn.speechId, 1)"><i ng-class="btn.icon" class="pull-left"></i> {{ btn.title }}</button>
+
+				</span>
+			</p>
+		</div>
+
+		<div ng-if="vm.seatingType == '2' && vm.rightContentShowButtons && !vm.isMinister">
+			<h3>Ställ en fråga till:</h3>
+			<p ng-repeat="btn in vm.buttons">
+				<span ng-if="btn.speechMode == 'disabled'">
+					<button class="btn btn-block btn-lg btn-primary disabled btn-custom"
+							ng-show="btn.current_limit != 0"><i ng-class="btn.icon" class="pull-left"></i> {{ btn.title }}</button>
+				</span>
+				<span ng-if="btn.speechMode == 'clickable'">
+					<button class="btn btn-block btn-lg btn-primary btn-custom"
+							ng-show="btn.current_limit != 0" ng-click="vm.requestSpeech(btn)"><i ng-class="btn.icon" class="pull-left"></i> {{ btn.title }}</button>
+				</span>
+
+				<span ng-if="btn.speechMode == 'recallable'">
+					<button class="btn btn-block btn-lg btn-warning btn-custom"
+							ng-show="btn.current_limit != 0" ng-click="vm.removeSpeech(btn.speechId, 1)"><i ng-class="btn.icon" class="pull-left"></i> {{ btn.title }}</button>
+
+				</span>
+			</p>
+		</div>
+
+		<div ng-if="!vm.rightContentShowButtons">
+			<h3>Talarlistan</h3>
+				<div class="list-group">
+				<div class="list-group-item indent-{{ speaker.indent }}" ng-repeat="speaker in vm.speakersList"  ng-class="{ 'list-group-item-info' : speaker.isSelf }" ng-click="vm.removeSpeech(speaker.id, speaker.isSelf)">
+					<h4 class="list-group-item-heading" ng-class="{ 'spoken' : speaker.status == 1 }">{{ speaker.name }}</h4>
+					<p class="list-group-item-text">{{ vm.types[speaker.type].title }}</p>
+				</div>
+			</div>
+		</div>
+
+	</div>
+
+	<div ng-if="vm.details.mode == 'vote'">
+		<h1>{{ vm.details.data.title }}</h1>
+
+		<div class="row vote">
+
+			<div class="col-md-12" ng-repeat="option in [1, 2, 0]">
+					<div class="btn btn-block btn-lg" ng-class="{'btn-warning' : vm.voted === vm.details.helper[option].id, 'btn-primary' : vm.voted !== vm.details.helper[option].id }" ng-click="vm.details.btn(vm.details.helper[option].id)">
+						<span ng-if="vm.details.helper[option].id == 1">{{ vm.details.data.alt_text_yes }}</span>
+						<span ng-if="vm.details.helper[option].id == 2">{{ vm.details.data.alt_text_no }}</span>
+						<i class="{{ vm.details.helper[option].icon }} pull-left"></i>{{ vm.details.helper[option].title }}
+					</div>
+			</div>
+
+		</div>
+
+	</div>
+
+</div>
+
+
+<div ng-if="!vm.isActive">
+	<h1>NOT ACTIVE</h1>
+</div>

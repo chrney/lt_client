@@ -1,0 +1,31 @@
+
+<div class="row no-gutter">
+
+	<div id="sidebar-wrapper" class="col-md-6">
+		<div id="sidebar">
+			<div ng-include="'/client/client.main/left.tpl.html'"></div>
+		</div>
+	</div>
+
+	<div id="main-wrapper" class="col-md-6">
+
+		<div id="main" class="col-md-12">
+
+			<div ng-if="vm.mode == 'vote'">
+				<h1>Omröstning pågår</h1>
+				<h2>{{ vm.currentVoting.title }}</h2>
+			</div>
+
+			<div ng-if="vm.mode == ''">
+				<button class="btn btn-primary btn-mega btn-block">Gruppanförande</button>
+				<p>&nbsp;</p>
+				<p>&nbsp;</p>
+				<button class="btn btn-success active btn-mega btn-block">Anförande</button>
+				<p>&nbsp;</p>
+				<p>&nbsp;</p>
+				<button disabled class="btn btn-primary btn-mega btn-block">Replik</button>
+			</div>
+		</div>
+	</div>
+
+</div>

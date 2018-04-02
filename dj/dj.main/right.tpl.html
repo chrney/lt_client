@@ -1,0 +1,10 @@
+<div>
+	<h3>Talarlistan</h3>
+		<div class="list-group">
+		<div class="list-group-item indent-{{ speaker.indent }}" ng-repeat="speaker in vm.speakersList"  ng-class="{ 'list-group-item-info' : speaker.isSelf }" ng-click="vm.removeSpeech(speaker.id, speaker.isSelf)">
+			<h4 class="list-group-item-heading" ng-class="{ 'spoken' : speaker.status == 1 }">{{ speaker.name }}</h4>
+			<p class="list-group-item-text">{{ vm.types[speaker.type].title }}</p>
+		</div>
+	</div>
+</div>
+

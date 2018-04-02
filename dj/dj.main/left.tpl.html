@@ -1,0 +1,269 @@
+&nbsp;
+&nbsp;
+<style>
+	.tab-pane {
+		height: calc(100vh - 128px);
+		overflow-y: auto;
+	}
+</style>
+<div class="row">
+		<div class="col-md-12">
+
+
+				<ul class="nav nav-tabs">
+					<li class="active"><a href="#tab1default" data-toggle="tab">Föredragningslista</a></li>
+					<li><a href="#tab2default" data-toggle="tab">Närvaroregistrering</a></li>
+					<li><a href="#tab3default" data-toggle="tab">Plenum</a></li>
+					<li><a href="#tab4default" data-toggle="tab">Omröstning</a></li>
+					<li class="dropdown">
+						<a href="#" data-toggle="dropdown">Dropdown <span class="caret"></span></a>
+						<ul class="dropdown-menu" role="menu">
+							<li><a href="#tab5default" data-toggle="tab">Default 5</a></li>
+							<li><a href="#tab6default" data-toggle="tab">Default 6</a></li>
+						</ul>
+					</li>
+				</ul>
+
+				<div class="tab-content ">
+
+						<div class="tab-pane fade in active" id="tab1default">
+							<h3>Föredragningslista</h3>
+							<div class="list-group">
+								<button
+										ng-repeat="item in vm.currentSeating.items"
+										type="button"
+										class="list-group-item"
+										ng-class="{'list-group-item-success' : item.id == vm.currentSeating.current_item }"
+										ng-click="vm.activateItem(item)"
+										ng-disabled="item.id == vm.currentSeating.current_item"
+								>
+									<span ng-if="item.source == 'infos'">{{ item.title }}</span>
+									<span ng-if="item.source == 'events'">
+										<i>{{ item.type.title }}</i>
+										<br />
+										<strong>{{ item.case.code }}</strong> | {{ item.case.title }}
+									</span>
+								</button>
+							</div>
+
+							<div class="col-md-12">
+								<button
+									class="pull-right btn"
+									ng-click="vm.moveAhead(true)"
+									ng-disabled="vm.isLastStep"
+									ng-class="{ 'disabled' : vm.isLastStep }"
+								>Nästa <i class="fa fa-arrow-right"></i></button>
+							</div>
+
+							<div ng-if="vm.recommendedButtons">
+
+								<p>Lägg till <select
+										class="form-control"
+										ng-model="vm.proceedItem.type"
+										ng-options="btn as btn.title for btn in vm.recommendedButtons track by btn.id"
+								></select>
+								<span ng-if="vm.mustChooseSeating">till <select
+										class="form-control"
+										ng-model="vm.proceedItem.seating"
+										ng-options="seating as seating.title for seating in vm.moveToUpcomingSeating track by seating.id"
+									></select>
+								</span>
+								</p>
+
+								<p ng-if="vm.proceedItem.type">
+									<button ng-click="vm.addItemAndMoveAhead()">Spara nu då.</button>
+								</p>
+
+								<pre>{{ vm.proceedItem | json }}</pre>
+
+								<pre>{{ vm.recommendedButtons | json }}</pre>
+							</div>
+
+						</div>
+
+						<div class="tab-pane fade" id="tab2default">
+							<h3>Närvaroregistrering</h3>
+							<div class="list-group">
+								<div class="list-group-item">
+									Status:
+									<span class="text-warning" ng-if="vm.currentSeating.attendance_check != 1">inaktiv</span>
+									<span class="text-success" ng-if="vm.currentSeating.attendance_check == 1">aktiv</span>
+									<span class="panel pull-right" ng-click="vm.activateAttendance()">Byt <i class="fa fa-refresh"></i></span>
+								</div>
+							</div>
+
+							<h4>Summering</h4>
+							<script type="text/ng-template" id="attendanceSums">
+								<div style="color: {{ data.color }}">
+									{{ data.title }}<span class="pull-right">{{ data.sum }}</span></span>
+								</div>
+								<ul ng-if="data.children">
+									<li ng-repeat="data in data.children" ng-include="'attendanceSums'"></li>
+								</ul>
+							</script>
+
+							<ul>
+								<li ng-repeat="data in vm.attendanceSum" ng-include="'attendanceSums'"></li>
+							</ul>
+
+							<hr />
+
+							<h4>Ledamöter</h4>
+							<ul>
+								<li ng-repeat="attendant in vm.currentSeating.attendants" style="color: {{ vm.currentSeating.presenceStates[attendant.type].color }}">
+									{{ attendant.name }}<span class="pull-right">{{ vm.currentSeating.presenceStates[attendant.type].title }}</span>
+								</li>
+							</ul>
+						</div>
+
+						<div class="tab-pane fade" id="tab3default">
+
+							<h3>Plenum</h3>
+							<div class="list-group">
+								<button class="list-group-item" ng-if="vm.currentSeating.state == '3' && !vm.chooseForStart" ng-click="vm.changeSeatingState(4)">Starta plenum</button>
+								<button class="list-group-item" ng-if="vm.currentSeating.state == '4'" ng-click="vm.changeSeatingState(5)">Avsluta plenum</button>
+
+								<div ng-if="vm.chooseForStart" class="list-group-item">
+									<h4>Välj talman och sekreterare</h4>
+
+									<p>
+										<label>Talman</label>
+										<select
+												class="form-control"
+												ng-model="vm.chooseForStart.currentSpeaker"
+										>
+											<option value="">--- Välj talman ---</option>
+											<option
+													value="{{ element.id }}"
+													ng-repeat="element in vm.chooseForStart.speakers track by element.id"
+											>{{ element.name }}</option>
+
+										</select>
+									</p>
+
+									<p>
+										<label>Sekreterare</label>
+										<select
+												class="form-control"
+												ng-model="vm.chooseForStart.currentSecretary"
+										>
+											<option value="">--- Välj sekreterare ---</option>
+											<option
+													value="{{ element.id }}"
+													ng-repeat="element in vm.chooseForStart.secretaries track by element.id"
+											>{{ element.name }}</option>
+
+										</select>
+									</p>
+									<p>
+										<button
+												class="btn"
+												ng-class="{'btn-success': vm.chooseForStart.currentSpeaker && vm.chooseForStart.currentSecretary }"
+												ng-disabled="!vm.chooseForStart.currentSpeaker || !vm.chooseForStart.currentSecretary"
+												ng-click="vm.startPlenum(vm.chooseForStart.currentSpeaker.id, vm.chooseForStart.currentSecretary.id)"
+										>Starta plenum</button>
+										<button class="btn btn-warning" ng-click="vm.chooseForStart = null">Avbryt</button>
+									</p>
+								</div>
+							</div>
+						</div>
+
+
+						<div class="tab-pane fade" id="tab4default">
+
+							<h3>Omröstning</h3>
+							<p>
+								<label>Åtgärd</label>
+								<select
+										class="form-control"
+										ng-model="vm.voting.forId"
+								>
+									<option value="">--- Välj åtgärd ---</option>
+									<option
+											ng-if="element.votings != null"
+											value="{{ element.id }}"
+											ng-repeat="element in vm.currentSeating.items track by element.id"
+									>{{ element.title }} ({{ element.votings.length }})</option>
+								</select>
+							</p>
+
+							<div ng-if="vm.voting.forId">
+
+								<div ng-if="vm.voting.previousVotings.length > 0 && !vm.voting.details">
+
+									<h3>Redigera befintlig omröstning</h3>
+									<ul class="list-group">
+										<li
+												class="list-group-item"
+												ng-repeat="voting in vm.voting.previousVotings track by voting.id"
+										>
+											<a ng-click="vm.editVoting(voting)">{{ voting.title }}</a>
+										</li>
+									</ul>
+								</div>
+
+								<p>
+									<button
+											class="btn btn-primary"
+											ng-click="vm.voting.details = {}"
+											ng-if="!vm.voting.details">Skapa ny ommröstning</button>
+								</p>
+
+								<div ng-if="vm.voting.details">
+									<h3 ng-if="!vm.voting.isUpdate">Skapa ny omröstning</h3>
+									<h3 ng-if="vm.voting.isUpdate">Redigera omröstning</h3>
+									<p>
+										<label>Titel</label>
+										<input type="text" class="form-control"  ng-model="vm.voting.details.title">
+									</p>
+									<p>
+										<label>Alternativ text för 'ja'</label>
+										<input type="text" class="form-control" ng-model="vm.voting.details.alt_text_yes">
+									</p>
+									<p>
+										<label>Alternativ text för 'nej'</label>
+										<input type="text" class="form-control" ng-model="vm.voting.details.alt_text_no">
+									</p>
+									<p ng-if="vm.voting.previousVotings.length > 0">
+										<label>Infogar efter...</label>
+										<select
+												class="form-control"
+												ng-model="vm.voting.sequence"
+										>
+											<option value="">--- Välj position ---</option>
+											<option value="0">- Högst upp -</option>
+											<option
+													ng-selected="{{ element.id == vm.voting.sequence }}"
+													value="{{ element.id }}"
+													ng-repeat="element in vm.voting.previousVotings"
+													ng-disabled="element.id == vm.voting.details.id"
+											>{{ element.title }}</option>
+										</select>
+									</p>
+									<pre>{{ vm.voting.isUpdate | json }}</pre>
+									<pre>{{ vm.voting.details | json }}</pre>
+									<p>
+										<button
+												class="btn"
+												ng-class="{'btn-success': vm.voting.details.title }"
+												ng-disabled="!vm.voting.details.title"
+												ng-click="vm.saveVoting()"
+										>Spara omröstning</button>
+										<button class="btn btn-warning" ng-click="vm.voting = null">Avbryt</button>
+									</p>
+
+								</div>
+
+							</div>
+
+
+						</div>
+						<div class="tab-pane fade" id="tab5default">Default 5</div>
+					</div>
+
+
+		</div>
+	</div>
+
+
+

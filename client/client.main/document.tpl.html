@@ -1,0 +1,13 @@
+<div>
+	<div class="modal-header">
+		<button type="button" class="close" data-dismiss="modal" aria-hidden="true" ng-click="closeModal()">&times;</button>
+		<h4 class="modal-title">{{ doc.title }}</h4>
+	</div>
+	<div class="modal-body document">
+		<iframe
+				ng-src="{{ doc.sanitizedPath }}"
+				class="iframedDocument"
+				allowfullscreen frameborder="0"
+		></iframe>
+	</div>
+</div>
