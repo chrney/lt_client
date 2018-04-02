@@ -38,7 +38,7 @@
 		</div>
 
 		<div ng-if="event.sequence.length > 0">
-			<h4>Tal & omröstningar</h4>
+			<h4>Tal & omröstningar...</h4>
 			<div ng-repeat="item in event.sequence">
 				<div ng-if="item.source === 'speeches'" class="speech {{ item.type.style }}">
 					<h5>{{ item.person.name }} <span class="label label-default">{{ item.type.title }}</span></h5>
