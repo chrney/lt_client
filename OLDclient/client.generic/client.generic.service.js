@@ -48,7 +48,7 @@
 				});
 			},
 
-			setMode: function (mode, obj) {
+			/*setMode: function (mode, obj) {
 
 				this.mode = {
 					'mode': mode,
@@ -56,6 +56,10 @@
 				};
 				$rootScope.$broadcast('mode_changed', this.mode);
 			},
+			*/
+
+			setMode: genericService.setMode,
+
 
 			isMinister: function () {
 				return _.has(this.user, 'roles') && _.includes(this.user.roles, 'minister');
@@ -98,23 +102,20 @@
 
 						if (seating.attendance_check == 1) {
 
+							var thisUser = _.find(seating.attendants, { 'person' : loginService.currentUser.member.id });
+
+
 							service.setMode('attendance', {
 								'attendance': 1,
 								'seating': seating.id
 							});
 
-						//	$rootScope.$broadcast('mode_changed', {
-						//		'mode': 'attendance',
-						//		'data': {
-						//			'attendance': 1,
-						//			'seating': seating.id
-						//		}
-						//	});
-
 						} else {
 
-							restService.get('votings/?open=1').getList().then(function(openVotings) {
 
+
+							restService.get('votings/?open=1').getList().then(function(openVotings) {
+console.log('here');
 								var result = openVotings.plain();
 
 								if (result.length > 0) {

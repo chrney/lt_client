@@ -13,7 +13,7 @@
 		var service =  {
 
 			sidebarVisible : true,
- 
+
 			mainCol : 9,
 
 			getSidebar : function() {

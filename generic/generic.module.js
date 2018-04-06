@@ -6,7 +6,7 @@
 		'angular-loading-bar',
 		'ws',
 		'ngAnimate',
-		'ngCookies', 
+		'ngCookies',
 		'ngSanitize',
 		'rest',
 		'ngCookies',

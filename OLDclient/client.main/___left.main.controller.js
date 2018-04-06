@@ -15,13 +15,18 @@
 	function clientMainLeftControllerFn(restService, clientGenericService, $scope, $rootScope, Notification) {
 		var vm = this;
 
+		console.log('hej');
 		function markItem(id) {
-			var r2 = _.findIndex(vm.currentSeating.items, function(item) {
-				return item.id == id;
-			});
 
-			return _.map(vm.currentSeating.items, function(item, idx) {
-				item.visible = idx >= (r2 - 1);
+			var foundItemIdx = _.findIndex(vm.currentSeating.items, { 'id' : id });
+
+			if (foundItemIdx == -1) {
+				foundItemIdx = 9999;
+			}
+
+			vm.currentSeating.items = _.map(vm.currentSeating.items, function(item, idx) {
+console.log(item, idx);
+				item.hasPassed = idx < foundItemIdx;
 				return item;
 			});
 		}
@@ -36,14 +41,16 @@
 					currentCase = _.first(_.filter(data.items, { 'id' : data.current_item })).case;
 				}
 
-				vm.currentSeating.items = markItem(vm.currentSeating.current_item);
+				console.log('here');
+
+				markItem(vm.currentSeating.current_item);
 				$rootScope.$broadcast('case_updated', currentCase.id);
 			});
 		});
 
 		$scope.$on('ws:current_item_changed', function(ev, data) {
 			vm.currentSeating.current_item = data.event;
-			vm.currentSeating.items = markItem(vm.currentSeating.current_item);
+			markItem(vm.currentSeating.current_item);
 			var thisItem = _.find(vm.currentSeating.items, { 'id' : data.event });
 			$rootScope.$broadcast('case_updated', thisItem.case.id);
 			$scope.$apply();

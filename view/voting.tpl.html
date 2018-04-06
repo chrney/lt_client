@@ -1,0 +1,17 @@
+<div class="modal-container vote">
+	<div class="modal-header">
+		<h4 class="modal-title">{{ voting.title }}</h4>
+	</div>
+
+	<div class="modal-body">
+
+		<div ng-repeat="btn in voting.buttons">
+			<button
+				class="btn btn-block btn-mega btn-primary"
+				ng-class="{ '{{ btn.button }} active' : voting.myVote == btn.id, 'btn-default' : voting.myVote != btn.id }"
+				ng-click="vm.sendVote(btn)"
+			>{{ btn.title }}
+			</button>
+		</div>
+	</div>
+</div>

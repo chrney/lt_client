@@ -20,7 +20,17 @@
 		 service = {
 
 			 init: function () {
-				 console.log('generic.service init');
+			//	 console.log('generic.service init');
+			 },
+
+			 setMode: function (mode, obj) {
+
+				 service.mode = {
+					 'mode': mode,
+					 'data': obj
+				 };
+				 console.error('mode set to ', service.mode);
+				 $rootScope.$broadcast('mode_changed', service.mode);
 			 },
 
 			 fullSeating: function (seating, keepInfoBlocks) {
@@ -326,7 +336,6 @@
 			 wsSender: function(str, obj) {
 				 wsService.custom(str, obj);
 			 }
-
 
 		 };
 

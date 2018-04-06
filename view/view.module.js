@@ -2,9 +2,11 @@
   'use strict';
 
   angular
-	.module('dj.main', [
+	.module('view', [
 		'rest',
 		'ui-notification',
+		'generic',
+		'oc.modal',
 	]);
 
 })();

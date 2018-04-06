@@ -41,15 +41,16 @@
 	    	}
 	    });
 
-	    $rootScope.$on('ws:voting_state_changed', function(ev, data) {
-	    	if (data.state == 1) { /* attendance_check activated */
-	    		genericService.setMode('vote', data);
-	    	} else {
-	    		console.log('voting: closed due to state', data.state);
-	    		genericService.setMode(''); // speakers list
-	    	}
+//	    $rootScope.$on('ws:voting_state_changed', function(ev, data) {
+//	    	if (data.state == 1) { /* vote activated */
+//	    		genericService.setMode('vote', data);
+//	    	} else {
+//	    		console.log('voting: closed due to state', data.state);
+//	    		genericService.setMode(''); // speakers list
+//	    	}
+//
+//	    });
 
-	    });
 
 	    $rootScope.$on('case_updated', function(ev, data) {
 	    	genericService.currentCase = data;

@@ -11,20 +11,13 @@
 
 		<div id="main" class="col-md-12">
 
-			<div ng-if="vm.mode == 'vote'">
-				<h1>Omröstning pågår</h1>
-				<h2>{{ vm.currentVoting.title }}</h2>
-			</div>
-
-			<div ng-if="vm.mode == ''">
+			<div class="flex-column">
 				<button class="btn btn-primary btn-mega btn-block">Gruppanförande</button>
-				<p>&nbsp;</p>
-				<p>&nbsp;</p>
 				<button class="btn btn-success active btn-mega btn-block">Anförande</button>
-				<p>&nbsp;</p>
-				<p>&nbsp;</p>
 				<button disabled class="btn btn-primary btn-mega btn-block">Replik</button>
 			</div>
+
+
 		</div>
 	</div>
 

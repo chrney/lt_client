@@ -1,0 +1,44 @@
+
+<div class="row no-gutter">
+
+	<div id="sidebar-wrapper" class="col-md-6">
+		<div id="sidebar">
+
+			<div class="nav list-group">
+				<div
+					class="list-group-item"
+					ng-repeat="item in vm.currentSeating.items"
+					ng-class="{ 'active' : item.id == vm.currentSeating.current_item, 'passed' : item.hasPassed,
+		 'hasSeparateHeader' : item.showSeparateHeader, 'isSeparateItem' : item.separate_list == '1' }"
+					id="item-{{ item.id }}"
+				>
+					<span class="counter">{{ item.idx }}</span>
+					<h3 class="list-group-item-heading">{{ item.case.title }}</h3>
+					<h4 class="list-group-item-text">{{ item.case.code }} | {{ item.type.title }}</h4>
+					<h4 ng-repeat="doc in item.case.document"
+						ng-click="vm.openDocument(doc)"
+						class="list-group-item-text link-style">
+						<i class="fa fa-file"></i> {{ doc.title }}
+					</h4>
+
+				</div>
+			</div>
+
+		</div>
+	</div>
+
+	<div id="main-wrapper" class="col-md-6">
+
+		<div id="main" class="col-md-12">
+
+			<div class="flex-column">
+				<button class="btn btn-primary btn-mega btn-block">Gruppanförande</button>
+				<button class="btn btn-success active btn-mega btn-block">Anförande</button>
+				<button disabled class="btn btn-primary btn-mega btn-block">Replik</button>
+			</div>
+
+
+		</div>
+	</div>
+
+</div>

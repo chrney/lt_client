@@ -2,7 +2,7 @@
 <project version="4">
   <component name="WebServers">
     <option name="servers">
-      <webServer id="31cf617f-32a0-49f0-896d-4b4b3683a5bb" name="client2.lagtinget.ax" url="http://view.lagtinget.ax">
+      <webServer id="31cf617f-32a0-49f0-896d-4b4b3683a5bb" name="view.lagtinget.ax" url="http://view.lagtinget.ax">
         <fileTransfer host="intranet.lagtinget.ax" port="22" rootFolder="/var/www/view.lagtinget.ax" accessType="SFTP">
           <advancedOptions>
             <advancedOptions dataProtectionLevel="Private" />
