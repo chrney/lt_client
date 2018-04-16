@@ -40,17 +40,15 @@ require "../" . $intranetPath . "/helpers.inc.php";
 				<div class="row">
 
 					<div class="col col-md-5">
-						<h3 ng-if="vm.currentSeating">
+						<h3 ng-if="vm.currentSeating && !vm.showCompanyName">
 							{{ vm.currentSeating.type == '1' ? 'Plenum' : 'Frågestund' }}
 						</h3>
+						<h3 ng-if="vm.showCompanyName">Ålands Lagting</h3>
 					</div>
 
 					<div class="col col-md-2 text-center">
 						<h3>
 							<i class="fa fa-clock-o" aria-hidden="true"></i> {{ vm.clock | date : 'H'}}{{ vm.showDots ? ':' : ' ' }}{{ vm.clock | date : 'mm' }}
-
-
-
 						</h3>
 					</div>
 
@@ -64,21 +62,7 @@ require "../" . $intranetPath . "/helpers.inc.php";
 			</div>
 		</div>
 
-		<div id="wrapper">
-
-			<div ng-controller="view.controller as vm">
-				<div ng-include="'/view/main.tpl.html'"></div>
-			</div>
-<!--
-			<div id="sidebar-wrapper" class="transformable" ng-class="{ 'col-md-3' : vm.narrowCol, 'col-md-9' : !vm.narrowCol }" ng-controller="client.main.right.controller as vm">
-				<div id="sidebar" class="col-md-12">
-				    <div ng-include="'/client/client.main/right.tpl.html'"></div>
-				</div>
-			</div>
-			-->
-
-
-		</div>
+		<div id="wrapper" class="container-fluid" ng-controller="view.controller as vm" ng-include="'/view/main.tpl.html'"></div>
 
 		<script src="//ws.lagtinget.ax:8080/socket.io/socket.io.js"></script>
 
@@ -88,6 +72,7 @@ require "../" . $intranetPath . "/helpers.inc.php";
 		<script src="//<?=$intranetPath?>/assets/custom/custom.js" type="text/javascript"></script>
 
 <?php   loadAngularCore(); ?>
+
 
 		<script src="//<?=$intranetPath?>/assets/custom/angular-ui-router/angular-ui-router.min.js" type="text/javascript"></script>
 
@@ -150,6 +135,5 @@ require "../" . $intranetPath . "/helpers.inc.php";
 
 		<!--<script src="/client/client.js" type="text/javascript"></script>
 		-->
-
 	</body>
 </html>

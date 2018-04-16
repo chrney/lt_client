@@ -2,8 +2,7 @@
 
 class Documentmodel  {
 
-	public function __construct() {
-	}
+	public function __construct() {}
 
 	private function everything_in_tags($string, $tagname, $id) {
 		$string = utf8_decode($string);
@@ -82,13 +81,13 @@ class Documentmodel  {
 	                $bodyContent = $this->everything_in_tags($contentData, 'body', $out['id']);
 
 	                $bodyContent = str_replace("\r\n", " ", $bodyContent);
-//		$bodyContent = preg_replace( "/src=\"(.*?-filer\/image\d\d\d\.)/" , "src=\"https://" . $parts['host'] . dirname($parts['path']) . "/$1"  , $bodyContent);
-		$bodyContent = preg_replace( "/src=\"(.*?-filer\/image\d\d\d\.)/" , "src=\"data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==\""  , $bodyContent);
+					//		$bodyContent = preg_replace( "/src=\"(.*?-filer\/image\d\d\d\.)/" , "src=\"https://" . $parts['host'] . dirname($parts['path']) . "/$1"  , $bodyContent);
+					$bodyContent = preg_replace( "/src=\"(.*?-filer\/image\d\d\d\.)/" , "src=\"data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==\""  , $bodyContent);
 	                $bodyContent = preg_replace("/<a name=\"(.*?)\">(.*?)<\/a>/si", "<span id=\"$1\">$2</span>", $bodyContent);
 
 	                $bodyContent = preg_replace("/font-size:\s?11\.0pt/si", "font-size: inherit", $bodyContent);
 
-	//				$bodyContent = preg_replace("/([:\s])(\d+?(.*?)?)(cm|pt)/" , "$1 calc(~\"1.4 * $2$4\") " , $bodyContent);
+					//				$bodyContent = preg_replace("/([:\s])(\d+?(.*?)?)(cm|pt)/" , "$1 calc(~\"1.4 * $2$4\") " , $bodyContent);
 
 					$thisDirectory = explode("/", $file);
 					array_pop($thisDirectory);
@@ -97,19 +96,13 @@ class Documentmodel  {
 	                $bodyContent = preg_replace("/href=\"([\%\\/\\w-_]*?\\.pdf)\"/si", "", $bodyContent);
 
 	                $out['content'] = $bodyContent;
-
-
-
 				} else {
 					header("HTTP/1.1 404 Not Found");
 				}
-
 			}
-
 
 		return $out;
 	}
-
 }
 
 
@@ -124,24 +117,27 @@ $thisDocument = $docInstance->getFile($_GET['file']);
 			<?=$thisDocument['css'];?>
 
 			body {
-
 				zoom: 150%;
 
-			-webkit-touch-callout: none; /* iOS Safari */
+				-webkit-touch-callout: none; /* iOS Safari */
 				-webkit-user-select: none; /* Safari */
 				-khtml-user-select: none; /* Konqueror HTML */
 				-moz-user-select: none; /* Firefox */
 				-ms-user-select: none; /* Internet Explorer/Edge */
 				user-select: none; /* Non-prefixed version, currently supported by Chrome and Opera */
-
-				background: #333;
+				background: #2e3338;
+				border-bottom: 1px solid #1c1e22;
 			}
 
 			* {
 				text-decoration: none;
-				color: white !important;
+				color: #c8c8c8 !important;
 				cursor: none !important;
 				pointer-events: none;
+			}
+
+			::-webkit-scrollbar {
+			    display: none;
 			}
 
 			* [class*="MsoToc"] a, * [class*="MsoToc"] a * {
@@ -155,9 +151,7 @@ $thisDocument = $docInstance->getFile($_GET['file']);
 
 		<?=$thisDocument['content'];?>
 
-
 		<script>
-
 			document.addEventListener('contextmenu', event => event.preventDefault());
 		</script>
 	</body>

@@ -20,35 +20,143 @@
 
 		var vm = this;
 
-		$scope.$watch('vm.mustCheckin', function(newVal, oldVal) {
-			if (newVal == true) {
-			//	vm.openAttendance();
-			}
-		});
+		vm.lockScreen = true;
 
-		$scope.$on('viewService:setSeating', function(ev, seating) {
-			vm.currentSeating = seating;
+		$scope.$on('viewService:setSeating', function() {
+			vm.currentSeating = viewService.currentSeating;
+			vm.lockScreen = false;
 
-			if (viewService.seatingActive() && viewService.user.isLedamot) {
-				console.log(viewService.user.person.id, vm.currentSeating);
+			if (viewService.seatingActive() && viewService.user.isLedamot && viewService.currentSeating.type == 1) {
 				var check = _.find(vm.currentSeating.attendants, { 'person' : viewService.user.person.id });
-				vm.mustCheckin = check.type != '163'; // dvs inte närvarande (än)
+				vm.mustCheckin = check.type != '163' && check.type != '159'; // dvs inte närvarande (än)
 			} else {
 				vm.mustCheckin = false;
 			}
+
+			vm.seatingActive = viewService.seatingActive();
 
 			setTimeout(function() {
 				scrollToItem(viewService.currentSeating.current_item);
 			}, 500);
 		});
 
+		$scope.$on('viewService:lockScreen', function(ev, id) {
+			vm.lockScreen = true;
+		});
 
 		$scope.$on('viewService:setCase', function(ev, id) {
 			if (id) {
-				console.log('viewService:setCase trigger', id);
 				scrollToItem(id);
 			}
 		});
+
+		$scope.$on('viewService:setButtons', function() {
+			vm.buttons = viewService.buttons;
+		});
+
+		$scope.$on('viewService:setMinisters', function() {
+			vm.ministers = viewService.ministers;
+		});
+
+		$scope.$on('viewService:setSpeakersList', function() {
+			vm.speakersList = viewService.speakers;
+			console.log('new speakersList', viewService.speakers);
+			var ids = _.map(viewService.speakers, 'id');
+
+			/* hide 'confirm to cancel question'-dialog */
+			if (vm.showCancelQuestion && !_.includes(ids, vm.showCancelQuestion)) {
+				vm.showCancelQuestion = false;
+			}
+
+			/* hide 'confirm to cancel speech'-dialog */
+			if (vm.showCancelSpeech && !_.includes(ids, vm.showCancelQuestion)) {
+				vm.showCancelSpeech = false;
+			}
+		});
+
+		vm.requestSpeech = function(button) {
+
+			if (!button.active) { /* nytt tal */
+
+				var parentId = 0;
+
+				if (button.id == appConstants.SEATING_TYPES[0].buttons.reply) {
+
+					parentId = _.find(viewService.speakers, function (speaker) {
+						return speaker.indent == 0 && speaker.type != 217; /* tal */
+					});
+					if (parentId) {
+						parentId = parentId.id;
+					}
+				}
+
+				restService.post(
+					'comments',
+					{
+						'branch': viewService.currentSeating.current_item,
+						'parent': '' + parentId,
+						'target':  {
+							'id' : viewService.user.person.id
+						},
+						'type' : button.id,
+					},
+					{ 'X-CSRF-Token' : loginService.getToken() }
+				);
+
+			} else {
+				console.log('Återkalla');
+				showCancelDialog(button.id);
+			}
+		};
+
+		vm.requestQuestion = function(button) {
+
+			if (!button.active) { /* nytt tal */
+
+				restService.post(
+					'comments',
+					{
+						'branch': viewService.currentSeating.current_item,
+						'parent': '0',
+						'target':  {
+							'id' : viewService.user.person.id
+						},
+						'type' : appConstants.SEATING_TYPES[1].buttons.question,
+						'answer_id' : button.id
+					},
+					{ 'X-CSRF-Token' : loginService.getToken() }
+				);
+			} else {
+				showCancelDialog(appConstants.SEATING_TYPES[1].buttons.question);
+			}
+		};
+
+		function showCancelDialog(commentType) {
+			vm.showCancelSpeech = commentType;
+			setTimeout(function() {
+				vm.showCancelSpeech = null;
+			}, 800000);
+		}
+
+		vm.deleteSpeech = function() {
+
+			/* find my speech with a set type */
+			var commentToDelete = _.find(viewService.speakers, {
+				'type' : vm.showCancelSpeech,
+				'person' : viewService.user.person.id
+			});
+
+			if (commentToDelete) {
+				restService.delete(
+					'comments/' + commentToDelete.id,
+					{'X-CSRF-Token': loginService.getToken()}
+				).then(function (success) { /* reload */
+					vm.showCancelSpeech = null;
+				});
+			} else {
+				vm.showCancelSpeech = null;
+			}
+		};
 
 		vm.openDocument = function (obj) {
 			obj.sanitizedPath = $sce.trustAsResourceUrl("https://view.lagtinget.ax/proxy.php?file=" + obj.path);
@@ -112,7 +220,7 @@
 			if (id) {
 				var foundItem = document.getElementById("item-" + id);
 				if (!_.isNull(foundItem)) {
-					document.getElementById('sidebar-wrapper').scrollTop = foundItem.offsetTop;
+					document.getElementById('agenda-list-container').scrollTop = foundItem.offsetTop;
 				}
 			}
 		}
@@ -134,17 +242,14 @@
 		$rootScope.$on('viewService:mode_changed', function(ev, response) {
 
 			if (!viewService.user.mustCheckin) { /* closed voting: hide vote-modal. Likewise  */
-				console.log('Must NOT checkin. closing all');
 				$ocModal.close();
 			}
 
-			vm.mode = response.mode;
+			vm.mode = viewService.mode.mode;
 
-			if (viewService.user.mustCheckin && vm.mode != 'attendance') {
+			if (viewService.user.mustCheckin && viewService.mode.mode != 'attendance') {
 				return;
 			}
-
-			console.error('Mode changed to ', response.mode);
 
 			if (vm.mode == 'vote' && viewService.user.isLedamot && !viewService.user.mustCheckin) {
 				restService.get('votings').one(response.data.id).get().then(function (votingResponse) {
@@ -162,7 +267,6 @@
 						_.find(appConstants.VOTE_STATES, {'id': '0'})
 					];
 
-					console.log('found open voting.');
 					vm.currentVoting = response.data;
 					vm.openVoting(vm.currentVoting);
 				});
@@ -171,11 +275,9 @@
 			}
 
 			if (vm.mode == 'attendance' && viewService.user.mustCheckin) {
-				console.error('Checking for attendance');
 				vm.attendance = response.data;
 				var thisCheck = _.find(viewService.currentSeating.attendants, {'person': viewService.user.person.id});
 				if (thisCheck.type == '163' || thisCheck.type == '159') { /* already checked in */
-					console.error('Checked in before');
 					viewService.user.mustCheckin = false;
 					viewService.setMode('', {});
 				} else {
@@ -189,12 +291,9 @@
 			}
 
 			if (vm.mode == '') {
-				console.error('Checking for default');
 				restService.get('votings/?open=1').getList().then(function(openVotings) {
 					openVotings = openVotings.plain();
-					console.error('Checking for votings');
 					if (openVotings.length > 0) {
-						console.error('Set to vote mode');
 						viewService.setMode('vote', openVotings[0]);
 						return;
 					}

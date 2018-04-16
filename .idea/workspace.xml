@@ -5,62 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3d2007c6-eeb4-4747-8e8a-69cd6f4758c5" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/OLDclient/client.main/attendance.tpl.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/OLDclient/client.main/document.tpl.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/OLDclient/client.main/main.controller.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/OLDclient/client.main/voting.tpl.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/proxy.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/view/attendance.tpl.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/view/main.tpl.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/view/topnav.controller.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/view/view.controller.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/view/view.module.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/view/view.run.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/view/view.service.js" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/client.main/main.controller.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dj/dj.generic/dj.generic.module.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dj/dj.generic/dj.generic.run.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dj/dj.generic/dj.generic.service.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dj/dj.helper/helper.controller.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dj/dj.helper/helper.module.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dj/dj.helper/helper.service.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dj/dj.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dj/dj.main/center.main.controller.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dj/dj.main/center.tpl.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dj/dj.main/left.main.controller.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dj/dj.main/left.tpl.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dj/dj.main/right.main.controller.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dj/dj.main/right.tpl.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dj/dj.topnav/topnav.controller.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dj/dj.topnav/topnav.module.js" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/client/client.generic/client.generic.module.js" afterPath="$PROJECT_DIR$/OLDclient/client.generic/client.generic.module.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/client/client.generic/client.generic.run.js" afterPath="$PROJECT_DIR$/OLDclient/client.generic/client.generic.run.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/client/client.generic/client.generic.service.js" afterPath="$PROJECT_DIR$/OLDclient/client.generic/client.generic.service.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/client/client.helper/helper.controller.js" afterPath="$PROJECT_DIR$/OLDclient/client.helper/helper.controller.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/client/client.helper/helper.module.js" afterPath="$PROJECT_DIR$/OLDclient/client.helper/helper.module.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/client/client.helper/helper.service.js" afterPath="$PROJECT_DIR$/OLDclient/client.helper/helper.service.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/client/client.js" afterPath="$PROJECT_DIR$/OLDclient/client.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/client/client.main/center.main.controller.js" afterPath="$PROJECT_DIR$/OLDclient/client.main/___center.main.controller.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/client/client.main/center.tpl.html" afterPath="$PROJECT_DIR$/OLDclient/client.main/___center.tpl.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/client/client.main/document.tpl.html" afterPath="$PROJECT_DIR$/view/document.tpl.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/client/client.main/left.main.controller.js" afterPath="$PROJECT_DIR$/OLDclient/client.main/___left.main.controller.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/client/client.main/left.tpl.html" afterPath="$PROJECT_DIR$/OLDclient/client.main/left.tpl.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/client/client.main/main.module.js" afterPath="$PROJECT_DIR$/OLDclient/client.main/main.module.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/client/client.main/main.tpl.html" afterPath="$PROJECT_DIR$/OLDclient/client.main/main.tpl.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/client/client.main/right.main.controller.js" afterPath="$PROJECT_DIR$/OLDclient/client.main/___right.main.controller.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/client/client.main/right.tpl.html" afterPath="$PROJECT_DIR$/OLDclient/client.main/___right.tpl.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/client/client.main/voting.tpl.html" afterPath="$PROJECT_DIR$/view/voting.tpl.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/client/client.topnav/topnav.controller.js" afterPath="$PROJECT_DIR$/OLDclient/client.topnav/topnav.controller.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/client/client.topnav/topnav.module.js" afterPath="$PROJECT_DIR$/OLDclient/client.topnav/topnav.module.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/dj.php" afterPath="$PROJECT_DIR$/proxy.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/dj/dj.main/main.module.js" afterPath="$PROJECT_DIR$/view/view.module.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/deployment.xml" afterPath="$PROJECT_DIR$/.idea/deployment.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/webServers.xml" afterPath="$PROJECT_DIR$/.idea/webServers.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/generic/generic.module.js" afterPath="$PROJECT_DIR$/generic/generic.module.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/generic/generic.run.js" afterPath="$PROJECT_DIR$/generic/generic.run.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/generic/generic.service.js" afterPath="$PROJECT_DIR$/generic/generic.service.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/custom/client.css" afterPath="$PROJECT_DIR$/assets/custom/client.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.php" afterPath="$PROJECT_DIR$/index.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/proxy.php" afterPath="$PROJECT_DIR$/proxy.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view/main.tpl.html" afterPath="$PROJECT_DIR$/view/main.tpl.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view/topnav.controller.js" afterPath="$PROJECT_DIR$/view/topnav.controller.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view/view.controller.js" afterPath="$PROJECT_DIR$/view/view.controller.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view/view.run.js" afterPath="$PROJECT_DIR$/view/view.run.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view/view.service.js" afterPath="$PROJECT_DIR$/view/view.service.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -77,24 +30,12 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="view.run.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/view/view.run.js">
+      <file leaf-file-name="view.controller.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/view/view.controller.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="234">
-              <caret line="13" column="13" lean-forward="false" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
+            <state relative-caret-position="903">
+              <caret line="292" column="0" lean-forward="false" selection-start-line="275" selection-start-column="0" selection-end-line="292" selection-end-column="0" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="client.generic.service.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/OLDclient/client.generic/client.generic.service.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="400">
-              <caret line="71" column="0" lean-forward="false" selection-start-line="71" selection-start-column="0" selection-end-line="73" selection-end-column="14" />
-              <folding>
-                <element signature="e#1575#2981#0" expanded="false" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -102,68 +43,8 @@
       <file leaf-file-name="view.service.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/view/view.service.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="572">
-              <caret line="169" column="32" lean-forward="false" selection-start-line="169" selection-start-column="0" selection-end-line="170" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="attendance.tpl.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/view/attendance.tpl.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="18">
-              <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="3" selection-end-column="10" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="document.tpl.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/view/document.tpl.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="234">
-              <caret line="13" column="0" lean-forward="false" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="view.controller.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/view/view.controller.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="234">
-              <caret line="77" column="16" lean-forward="false" selection-start-line="77" selection-start-column="16" selection-end-line="77" selection-end-column="16" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/index.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="417">
-              <caret line="108" column="35" lean-forward="false" selection-start-line="108" selection-start-column="35" selection-end-line="108" selection-end-column="35" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/.gitignore">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="18">
-              <caret line="1" column="0" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="voting.tpl.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/view/voting.tpl.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+            <state relative-caret-position="485">
+              <caret line="424" column="19" lean-forward="true" selection-start-line="424" selection-start-column="19" selection-end-line="424" selection-end-column="19" />
               <folding />
             </state>
           </provider>
@@ -172,8 +53,68 @@
       <file leaf-file-name="main.tpl.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/view/main.tpl.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="576">
-              <caret line="32" column="0" lean-forward="false" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
+            <state relative-caret-position="796">
+              <caret line="57" column="22" lean-forward="true" selection-start-line="57" selection-start-column="22" selection-end-line="57" selection-end-column="22" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="client.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/assets/custom/client.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="427">
+              <caret line="96" column="8" lean-forward="false" selection-start-line="96" selection-start-column="1" selection-end-line="96" selection-end-column="8" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="view.run.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/view/view.run.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="360">
+              <caret line="20" column="0" lean-forward="false" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/index.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="554">
+              <caret line="45" column="53" lean-forward="false" selection-start-line="45" selection-start-column="53" selection-end-line="45" selection-end-column="53" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="topnav.controller.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/view/topnav.controller.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="504">
+              <caret line="28" column="30" lean-forward="false" selection-start-line="28" selection-start-column="30" selection-end-line="28" selection-end-column="30" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="view.module.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/view/view.module.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="162">
+              <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="18">
+              <caret line="1" column="0" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -190,36 +131,36 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>open</find>
-      <find>setmo</find>
-      <find>votings</find>
-      <find>appConstants._</find>
-      <find>openAttend</find>
-      <find>currentCase</find>
-      <find>scrollToItem</find>
-      <find>scrollTo</find>
-      <find>buttons</find>
-      <find>success</find>
-      <find>client.main</find>
-      <find>client</find>
-      <find>client.generic.s</find>
-      <find>wsService</find>
-      <find>fullseat</find>
-      <find>setS</find>
-      <find>is</find>
-      <find>isle</find>
-      <find>ismin</find>
-      <find>generic</find>
+      <find>contains</find>
+      <find>href</find>
+      <find>setbuttons</find>
+      <find>service.min</find>
+      <find>setspeak</find>
+      <find>setseat</find>
+      <find>service.mode</find>
+      <find>service.user.person</find>
+      <find>setbutton</find>
+      <find>.type</find>
+      <find>217</find>
+      <find>getminist</find>
+      <find>ministers</find>
+      <find>request</find>
+      <find>questionsTarget</find>
+      <find>list</find>
+      <find>sendVote</find>
+      <find>4</find>
+      <find>setSeating</find>
+      <find>currentVoting</find>
+      <find>#ECE</find>
+      <find>changed</find>
+      <find>center-</find>
+      <find>check_un</find>
+      <find>BUTTONS</find>
+      <find>ani</find>
+      <find>voting_sta</find>
       <find>seatingActive</find>
-      <find>case_updated</find>
-      <find>seatingAc</find>
-      <find>ws:</find>
-      <find>sepa</find>
-      <find>mode_</find>
-      <find>passed</find>
-      <find>'event</find>
-      <find>allitems</find>
       <find>setmode</find>
+      <find>vm.atte</find>
     </findStrings>
     <replaceStrings>
       <replace>generateButtons</replace>
@@ -240,8 +181,8 @@
       <dir>$PROJECT_DIR$/dj</dir>
       <dir>$PROJECT_DIR$/client/client.main</dir>
       <dir>$PROJECT_DIR$/client</dir>
-      <dir>$PROJECT_DIR$</dir>
       <dir>$PROJECT_DIR$/OLDclient</dir>
+      <dir>$PROJECT_DIR$</dir>
       <dir>$PROJECT_DIR$/view</dir>
     </dirStrings>
   </component>
@@ -292,16 +233,16 @@
         <option value="$PROJECT_DIR$/client/client.main/main.controller.js" />
         <option value="$PROJECT_DIR$/client/client.main/left.tpl.html" />
         <option value="$PROJECT_DIR$/generic/generic.service.js" />
-        <option value="$PROJECT_DIR$/view/view.run.js" />
-        <option value="$PROJECT_DIR$/view/view.module.js" />
         <option value="$PROJECT_DIR$/generic/generic.module.js" />
-        <option value="$PROJECT_DIR$/view/topnav.controller.js" />
-        <option value="$PROJECT_DIR$/view/main.tpl.html" />
         <option value="$PROJECT_DIR$/view/attendance.tpl.html" />
         <option value="$PROJECT_DIR$/view/voting.tpl.html" />
+        <option value="$PROJECT_DIR$/view/view.run.js" />
+        <option value="$PROJECT_DIR$/view/view.module.js" />
+        <option value="$PROJECT_DIR$/view/topnav.controller.js" />
+        <option value="$PROJECT_DIR$/index.php" />
+        <option value="$PROJECT_DIR$/view/main.tpl.html" />
         <option value="$PROJECT_DIR$/view/view.service.js" />
         <option value="$PROJECT_DIR$/view/view.controller.js" />
-        <option value="$PROJECT_DIR$/index.php" />
       </list>
     </option>
   </component>
@@ -312,8 +253,8 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="337" />
-    <option name="y" value="143" />
+    <option name="x" value="379" />
+    <option name="y" value="74" />
     <option name="width" value="2018" />
     <option name="height" value="1370" />
   </component>
@@ -342,6 +283,33 @@
               <item name="client" type="b2602c69:ProjectViewProjectNode" />
               <item name="client" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="client" type="b2602c69:ProjectViewProjectNode" />
+              <item name="client" type="462c0819:PsiDirectoryNode" />
+              <item name="assets" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="client" type="b2602c69:ProjectViewProjectNode" />
+              <item name="client" type="462c0819:PsiDirectoryNode" />
+              <item name="assets" type="462c0819:PsiDirectoryNode" />
+              <item name="custom" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="client" type="b2602c69:ProjectViewProjectNode" />
+              <item name="client" type="462c0819:PsiDirectoryNode" />
+              <item name="generic" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="client" type="b2602c69:ProjectViewProjectNode" />
+              <item name="client" type="462c0819:PsiDirectoryNode" />
+              <item name="generic" type="462c0819:PsiDirectoryNode" />
+              <item name="ws" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="client" type="b2602c69:ProjectViewProjectNode" />
+              <item name="client" type="462c0819:PsiDirectoryNode" />
+              <item name="view" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -355,7 +323,7 @@
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
     <property name="jsx.switch.disabled" value="true" />
-    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Debugger" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.General" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -502,17 +470,18 @@
       <workItem from="1505452179659" duration="113000" />
       <workItem from="1522048548341" duration="2722000" />
       <workItem from="1522064990191" duration="33222000" />
-      <workItem from="1522728877523" duration="44775000" />
+      <workItem from="1522728877523" duration="92973000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="311464000" />
+    <option name="totallyTimeSpent" value="359662000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="337" y="143" width="2018" height="1370" extended-state="0" />
+    <frame x="379" y="74" width="2018" height="1370" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24636956" sideWeight="0.75021535" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.13570355" sideWeight="0.75021535" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32893288" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32784313" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -621,14 +590,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1039">
           <caret line="93" column="0" lean-forward="false" selection-start-line="93" selection-start-column="0" selection-end-line="93" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/custom/client.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="283">
-          <caret line="74" column="13" lean-forward="true" selection-start-line="74" selection-start-column="13" selection-end-line="74" selection-end-column="13" />
           <folding />
         </state>
       </provider>
@@ -773,14 +734,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/generic/ws/ws.service.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="702">
-          <caret line="39" column="14" lean-forward="true" selection-start-line="39" selection-start-column="14" selection-end-line="39" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/OLDclient/client.topnav/topnav.module.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="36">
@@ -861,68 +814,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/generic/generic.service.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="792">
-          <caret line="44" column="42" lean-forward="false" selection-start-line="44" selection-start-column="42" selection-end-line="44" selection-end-column="42" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/view/view.module.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="12" column="0" lean-forward="true" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/view/topnav.controller.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="666">
-          <caret line="37" column="20" lean-forward="false" selection-start-line="37" selection-start-column="20" selection-end-line="37" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/OLDclient/client.generic/client.generic.service.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="400">
-          <caret line="71" column="0" lean-forward="false" selection-start-line="71" selection-start-column="0" selection-end-line="73" selection-end-column="14" />
-          <folding>
-            <element signature="e#1575#2981#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/view/view.run.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="13" column="13" lean-forward="false" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/view/main.tpl.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="576">
-          <caret line="32" column="0" lean-forward="false" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/view/document.tpl.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="234">
           <caret line="13" column="0" lean-forward="false" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/view/attendance.tpl.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="18">
-          <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="3" selection-end-column="10" />
           <folding />
         </state>
       </provider>
@@ -935,22 +830,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/view/view.service.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="572">
-          <caret line="169" column="32" lean-forward="false" selection-start-line="169" selection-start-column="0" selection-end-line="170" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/view/view.controller.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="77" column="16" lean-forward="false" selection-start-line="77" selection-start-column="16" selection-end-line="77" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/proxy.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="876">
@@ -959,18 +838,108 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="417">
-          <caret line="108" column="35" lean-forward="false" selection-start-line="108" selection-start-column="35" selection-end-line="108" selection-end-column="35" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="18">
           <caret line="1" column="0" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/OLDclient/client.generic/client.generic.service.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="214">
+          <caret line="145" column="12" lean-forward="false" selection-start-line="145" selection-start-column="12" selection-end-line="145" selection-end-column="12" />
+          <folding>
+            <element signature="e#1575#2981#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/generic/generic.service.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="271">
+          <caret line="310" column="0" lean-forward="true" selection-start-line="310" selection-start-column="0" selection-end-line="310" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/generic/ws/ws.service.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="341">
+          <caret line="33" column="0" lean-forward="true" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/view/view.run.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="20" column="0" lean-forward="false" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/view/view.module.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/custom/client.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="427">
+          <caret line="96" column="8" lean-forward="false" selection-start-line="96" selection-start-column="1" selection-end-line="96" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/view/topnav.controller.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="504">
+          <caret line="28" column="30" lean-forward="false" selection-start-line="28" selection-start-column="30" selection-end-line="28" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="554">
+          <caret line="45" column="53" lean-forward="false" selection-start-line="45" selection-start-column="53" selection-end-line="45" selection-end-column="53" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/view/main.tpl.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="796">
+          <caret line="57" column="22" lean-forward="true" selection-start-line="57" selection-start-column="22" selection-end-line="57" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/view/view.service.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="485">
+          <caret line="424" column="19" lean-forward="true" selection-start-line="424" selection-start-column="19" selection-end-line="424" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/view/attendance.tpl.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="18">
+          <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="3" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/view/view.controller.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="903">
+          <caret line="292" column="0" lean-forward="false" selection-start-line="275" selection-start-column="0" selection-end-line="292" selection-end-column="0" />
           <folding />
         </state>
       </provider>

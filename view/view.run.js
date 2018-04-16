@@ -7,9 +7,17 @@
 
 	runBlockFn.$inject = [
 		'view.service',
+		'$rootScope',
 	];
 
-	function runBlockFn(viewService) {
+
+	function runBlockFn(viewService, $rootScope) {
+
+		$rootScope.$onMany = function(events, fn) {
+			for(var i = 0; i < events.length; i++) {
+				this.$on(events[i], fn);
+			}
+		};
 
 		viewService.init();
 

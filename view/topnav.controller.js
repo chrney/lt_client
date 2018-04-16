@@ -13,10 +13,20 @@
 	function viewTopNavControllerFn($scope, viewService, $interval) {
 		var vm = this;
 
-		$scope.$on('viewService:setSeating', function(ev, data) {
+		$scope.$on('viewService:clientAuthenticated', function(ev, data) {
 			vm.user = viewService.user;
+		});
+
+		vm.showCompanyName = true;
+
+		$scope.$on('viewService:lockScreen', function(ev, id) {
+			vm.showCompanyName = true;
+		});
+
+		$scope.$on('viewService:setSeating', function(ev, data) {
 			vm.currentSeating = data;
 			vm.isActive = viewService.seatingActive();
+			vm.showCompanyName = false;
 		});
 
 		function tick() {

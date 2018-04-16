@@ -1,44 +1,108 @@
+<!-- recall speech -->
+<script type="text/ng-template" id="confirm-dialog.html">
 
-<div class="row no-gutter">
+	<h2>Vill du verkligen återkalla din taltur?</h2>
 
-	<div id="sidebar-wrapper" class="col-md-6">
-		<div id="sidebar">
+	<button
+			ng-click="vm.deleteSpeech()"
+			class="btn btn-success btn-mega"
+	>Ja</button>
 
-			<div class="nav list-group">
-				<div
-					class="list-group-item"
-					ng-repeat="item in vm.currentSeating.items"
-					ng-class="{ 'active' : item.id == vm.currentSeating.current_item, 'passed' : item.hasPassed,
-		 'hasSeparateHeader' : item.showSeparateHeader, 'isSeparateItem' : item.separate_list == '1' }"
-					id="item-{{ item.id }}"
-				>
-					<span class="counter">{{ item.idx }}</span>
-					<h3 class="list-group-item-heading">{{ item.case.title }}</h3>
-					<h4 class="list-group-item-text">{{ item.case.code }} | {{ item.type.title }}</h4>
-					<h4 ng-repeat="doc in item.case.document"
-						ng-click="vm.openDocument(doc)"
-						class="list-group-item-text link-style">
-						<i class="fa fa-file"></i> {{ doc.title }}
-					</h4>
+	<button
+			ng-click="vm.showCancelSpeech = null"
+			class="btn btn-danger btn-mega"
+	>Nej</button>
 
+</script>
+
+
+<!-- show some hours before -->
+<script type="text/ng-template" id="not-active.html">
+
+	<h1><span ng-if="vm.currentSeating.type == 1">Plenum</span><span ng-if="vm.currentSeating.type == 2">Frågestunden</span> börjar kl. {{ vm.currentSeating.ts | date : "HH:mm" }}</h1>
+
+</script>
+
+<!-- lock screen -->
+<div class="center-content" ng-if="vm.lockScreen">
+	<img class="img-responsive center-block" src="https://client.lagtinget.ax/assets/img/logo_grey.png" width="400" height="400" alt="logo">
+</div>
+
+
+<!-- main screen -->
+<div class="row no-gutter" ng-if="!vm.lockScreen">
+
+	<!-- Plenum -->
+	<div ng-if="vm.currentSeating.type == '1'">
+
+		<div class="col-md-6">
+
+			<div id="agenda-list-container">
+				<div id="agenda-list" class="list-group">
+					<div
+							class="list-group-item"
+							ng-repeat="item in vm.currentSeating.items"
+							ng-class="{ 'active' : item.id == vm.currentSeating.current_item, 'passed' : item.hasPassed, 'hasSeparateHeader' : item.showSeparateHeader, 'isSeparateItem' : item.separate_list == '1' }"
+							id="item-{{ item.id }}"
+					>
+						<span class="counter">{{ item.idx }}</span>
+						<h3 class="list-group-item-heading">{{ item.case.title }}</h3>
+						<h4 class="list-group-item-text">{{ item.case.code }} | {{ item.type.title }}</h4>
+						<h4 ng-repeat="doc in item.case.document"
+							ng-click="vm.openDocument(doc)"
+							class="list-group-item-text link-style">
+							<i class="fa fa-file"></i> {{ doc.title }}
+						</h4>
+
+					</div>
 				</div>
 			</div>
 
 		</div>
-	</div>
 
-	<div id="main-wrapper" class="col-md-6">
+		<div class="col-md-6">
 
-		<div id="main" class="col-md-12">
-
-			<div class="flex-column">
-				<button class="btn btn-primary btn-mega btn-block">Gruppanförande</button>
-				<button class="btn btn-success active btn-mega btn-block">Anförande</button>
-				<button disabled class="btn btn-primary btn-mega btn-block">Replik</button>
+			<div class="flex-column" ng-if="!vm.showCancelSpeech && vm.seatingActive">
+				<button
+					ng-click="vm.requestSpeech(button)"
+					class="btn btn-primary btn-mega btn-block"
+					ng-repeat="button in vm.buttons"
+					ng-disabled="button.disabled"
+					ng-class="{ 'btn-success active' : button.active }"
+				>{{ button.title }}</button>
 			</div>
 
+			<div class="confirm" ng-if="vm.showCancelSpeech" ng-include="'confirm-dialog.html'"></div>
+
+			<div class="center-content"
+				 ng-if="!vm.seatingActive"
+				 ng-include="'not-active.html'"
+			></div>
 
 		</div>
+
+	</div>
+
+	<!-- Frågestund -->
+	<div class="col-md-12" ng-if="vm.currentSeating.type == '2'">
+
+		<div class="flex-row" ng-if="!vm.showCancelSpeech && vm.seatingActive">
+			<button
+				ng-click="vm.requestQuestion(button)"
+				class="btn btn-primary btn-mega btn-block"
+				ng-repeat="button in vm.ministers"
+				ng-disabled="button.disabled"
+				ng-class="{ 'btn-success active' : button.active }"
+			>{{ button.role_title }}<span ng-if="button.type < 2">et</span> {{ button.last_name}}</button>
+		</div>
+
+		<div class="confirm" ng-if="vm.showCancelSpeech" ng-include="'confirm-dialog.html'"></div>
+
+		<div class="center-content"
+			 ng-if="!vm.seatingActive"
+			 ng-include="'not-active.html'"
+		></div>
+
 	</div>
 
 </div>
