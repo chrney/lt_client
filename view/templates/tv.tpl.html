@@ -1,0 +1,61 @@
+<!-- show some hours before -->
+<script type="text/ng-template" id="not-active.html">
+	<h1><span ng-if="vm.currentSeating.type == 1">Plenum</span><span ng-if="vm.currentSeating.type == 2">Frågestunden</span> börjar kl. {{ vm.currentSeating.ts | date : "HH:mm" }}</h1>
+</script>
+
+<!-- lock screen - no seating pending -->
+<div class="center-content" ng-show="vm.lockScreen || (!vm.currentCase && vm.seatingActive && vm.mode == '')">
+	<img class="img-responsive center-block" src="https://client.lagtinget.ax/assets/img/logo_grey.png" alt="logo">
+</div>
+
+<!-- lock screen - seating pending -->
+<div class="center-content" ng-show="!vm.seatingActive">
+	<div ng-include="'not-active.html'"></div>
+</div>
+
+<!-- main screen -->
+<div class="row no-gutterX full-height" ng-show="!vm.lockScreen && vm.seatingActive">
+
+	<!-- Plenum -->
+	<div class="col-md-12" ng-if="vm.seatingActive">
+
+		<div ng-if="vm.mode == 'vote' || vm.mode == 'attendance'" ng-include="'/view/templates/seat-map.html'"></div>
+		<div ng-if="vm.mode == '' && vm.currentCase">
+
+			<div class="row header border-bottom">
+				<div class="col-xs-12 flex-row">
+					<div class="progress-item" ng-class="{'active' : i.idx <= vm.currentCase.idx}" ng-repeat="i in vm.currentSeating.items"></div>
+				</div>
+
+				<div class="col-xs-12">
+					<h3 class="margin-top-10">{{ vm.currentCase.type.title }}</h3>
+				</div>
+				<div class="col-xs-12">
+					<h2>{{ vm.currentCase.case.title }}</h2>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="timerbar" ng-show="vm.timer.ticking" ng-include="'/view/templates/timer.tpl.html'"></div>
+
+				<div class="col-xs-12">
+					<ul class="list-group speakers-list" ng-if="vm.speakersList.length >  0">
+						<li
+							class="list-group-item"
+							ng-repeat="speaker in vm.speakersList track by $index"
+							ng-class="{ 'active' : speaker.isLast == true, 'spoken' : speaker.status == '1', 'group' : speaker.type == '230', 'single' : speaker.type == '144', 'reply' : speaker.type == '145', 'indent-1' : speaker.indent == 1 }"
+						> {{ speaker.name }}</li>
+					</ul>
+					<h3 class="text-center" ng-if="vm.speakersList.length == 0">Talarlistan är tom</h3>
+				</div>
+			</div>
+
+			<div class="row next-case" ng-if="vm.speakersList.length < 8 && vm.nextCase.case.title">
+				<div class="col-xs-12">
+					<span>Följande ärende</span>{{ vm.nextCase.case.title }}
+				</div>
+			</div>
+
+		</div>
+	</div>
+</div>

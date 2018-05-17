@@ -27,7 +27,18 @@
 			vm.currentSeating = data;
 			vm.isActive = viewService.seatingActive();
 			vm.showCompanyName = false;
+			findSpeaker();
 		});
+
+		$scope.$on('viewService:setSpeaker', function() {
+			findSpeaker();
+		});
+
+		function findSpeaker() {
+			if (_.has(vm.currentSeating, 'attendants') && viewService.currentSpeaker) {
+				vm.currentSpeaker = _.find(vm.currentSeating.attendants, { 'person' : '' + viewService.currentSpeaker });
+			}
+		}
 
 		function tick() {
 			var rightNow = new Date(),

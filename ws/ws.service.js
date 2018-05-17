@@ -15,9 +15,11 @@
 
 		var service =  {
 
-			user: null,
+			user: {},
 
 			connected: null,
+
+			withCredentials: true,
 
 			init: function() {
 				service.socket = io.connect('https://ws.lagtinget.ax:8080', {
@@ -34,7 +36,7 @@
 
 			registerUser : function() {
 				var user = loginService.currentUser;
-				service.user = user;
+				service.user = _.isObject(user) ? user : { 'uid' : 0 };
 				service.token = loginService.getToken();
 				service.connect();
 			},
@@ -44,7 +46,7 @@
 					'headers': {
 						'X-CSRF-Token' : service.token,
 					},
-					'withCredentials': true
+					'withCredentials': service.withCredentials
 				});
 			},
 
@@ -65,12 +67,14 @@
 			},
 
 			ping: function() {
+				/*
 				$interval(function () {
 					service.socket.emit('message', {
 						'action': 'ping',
 						'user': service.user.uid
 					});
-				}, 5000 * 1000);
+				}, 2 * 1000);
+				*/
 			},
 
 			connect: function(room) {

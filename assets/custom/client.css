@@ -9,8 +9,12 @@ ng\:form {
 }
 
 * {
-    transition-duration: 0.3s;
+    transition-duration: 0.4s;
     transition-property: all;
+}
+
+.ng-leave {
+    transition-duration: 0s;
 }
 
 html, body {
@@ -18,42 +22,43 @@ html, body {
     overflow: hidden;
     -webkit-touch-callout: none; /* iOS Safari */
     -webkit-user-select: none; /* Safari */
-    -khtml-user-select: none; /* Konqueror HTML */
     -moz-user-select: none; /* Firefox */
     -ms-user-select: none; /* Internet Explorer/Edge */
     user-select: none; /* Non-prefixed version, currently supported by Chrome and Opera */
 }
 
 @media (max-width: 1280px)  { /* dölj muspekaren på mindre skärmar */
-    /*body { cursor: none !important}*/
-    body { cursor: crosshair !important}
+    body { cursor: none !important;}
+    /*body { cursor: crosshair !important}*/
 }
 
 ::-webkit-scrollbar {
     display: none;
 }
 
-#wrapper {
+.client #wrapper {
     height: 89vh;
 }
 
-#main-wrapper, #sidebar-wrapper {
+.client #wrapper .col-md-6, .client #wrapper .col-md-12 {
     height: 89vh;
     overflow-y: scroll;
 }
 
-#main {
+#agenda-list {
     height: 100%;
+    overflow: scroll;
 }
 
 .row.no-gutter {
-  margin-left: 0;
-  margin-right: 0;
+    height: 100%;
+    /*margin-left: 0;
+    margin-right: 0;*/
 }
 
-.row.no-gutter [class*='col-']:not(:first-child),
-.row.no-gutter [class*='col-']:not(:last-child) {
-  padding-right: 0;
+.client .row.no-gutter [class*='col-']:not(:first-child),
+.client .row.no-gutter [class*='col-']:not(:last-child) {
+  /*padding-right: 0;*/
   padding-left: 0;
 }
 
@@ -98,7 +103,8 @@ html, body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 80vh;
+    height: 91vh;
+    background: #272b30;
 }
 
 /********* LISTAN *******/
@@ -113,40 +119,8 @@ html, body {
     width: 30px;
 }
 
-
-.list-group-item.passed {
-    opacity: 0.3;
-}
-
-.list-group-item.active, .list-group-item.active:hover {
-    color: #42b142;
-    border-left: 10px solid;
-    padding-left: 50px;
-}
-
-.list-group-item.active::after, .list-group-item.active:hover::after {
-    transition-duration: 0.8s;
-    left: 0;
-	top: 50%;
-	border: solid transparent;
-	content: " ";
-	height: 0;
-	width: 0;
-	position: absolute;
-	pointer-events: none;
-	border-color: rgba(136, 183, 213, 0);
-	border-left-color: #42b142;
-	border-width: 30px;
-	margin-top: -30px;
-}
-
-.list-group-item.active .counter {
-    color: transparent;
-}
-
-
 .link-style {
-   padding: 6px 0px;
+   padding: 6px 0;
 }
 
 .link-style .fa {
@@ -162,29 +136,57 @@ html, body {
     text-decoration: none;
 }
 
-.list-group-item {
+#agenda-list .list-group-item.passed {
+    opacity: 0.3;
+}
+
+#agenda-list .list-group-item.active, .list-group-item.active:hover {
+    color: #42b142;
+    border-left: 10px solid;
+    padding-left: 50px;
+}
+
+#agenda-list .list-group-item.active::after, .list-group-item.active:hover::after {
+    transition-duration: 0.8s;
+    left: 0;
+	top: 50%;
+	border: 30px solid rgba(136, 183, 213, 0);
+	content: " ";
+	height: 0;
+	width: 0;
+	position: absolute;
+	pointer-events: none;
+	border-left-color: #42b142;
+	margin-top: -30px;
+}
+
+#agenda-list .list-group-item.active .counter {
+    color: transparent;
+}
+
+#agenda-list .list-group-item {
    padding: 15px 10px 15px 60px;
    margin-bottom: 10px;
 }
 
-.list-group-item-heading {
+#agenda-list .list-group-item-heading {
    line-height: 1.3;
 }
 
-.list-group-item-success h3, .list-group-item-success h4 {
+#agenda-list .list-group-item-success h3, .list-group-item-success h4 {
     text-shadow: none;
 }
 
-.list-group-item.isSeparateItem:not(.passed) {
+#agenda-list .list-group-item.isSeparateItem:not(.passed) {
     margin-left: 3em;
     position: relative;
 }
 
-.list-group-item.hasSeparateHeader:not(.passed) {
+#agenda-list .list-group-item.hasSeparateHeader:not(.passed) {
     margin-top: 3em;
 }
 
-.list-group-item.hasSeparateHeader:not(.passed)::before {
+#agenda-list .list-group-item.hasSeparateHeader:not(.passed)::before {
     content: 'Tilläggslista';
     top: -1.5em;
     position: absolute;
@@ -328,6 +330,31 @@ html, body {
     flex: 1 1 auto;
 }
 
-#main-wrapper.col-md-6 .confirm .btn {
+.col-md-6 .confirm .btn {
     flex-basis: 100%;
+}
+
+/*************/
+
+.indent-1 {
+    margin-left: 40px;
+}
+
+.indent-2 {
+    margin-left: 80px;
+}
+
+.indent-3 {
+    margin-left: 120px;
+}
+
+.indent-4 {
+    margin-left: 160px;
+}
+
+/**************/
+
+
+.voting-results .panel .text-center {
+    padding: 10px;
 }

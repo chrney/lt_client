@@ -25,42 +25,28 @@
 
 <!-- lock screen -->
 <div class="center-content" ng-if="vm.lockScreen">
-	<img class="img-responsive center-block" src="https://client.lagtinget.ax/assets/img/logo_grey.png" width="400" height="400" alt="logo">
+	<img class="img-responsive center-block" src="../../assets/images/logo_grey.png" width="400" height="400" alt="logo">
 </div>
 
 
+<!-- current speaker-screen -->
+<div class="center-content" ng-if="vm.isSpeaker">
+	<h1>Aktuell talman</h1>
+</div>
+
 <!-- main screen -->
-<div class="row no-gutter" ng-if="!vm.lockScreen">
+<div class="row no-gutter" ng-if="!vm.lockScreen && !vm.isSpeaker">
 
 	<!-- Plenum -->
 	<div ng-if="vm.currentSeating.type == '1'">
 
-		<div class="col-md-6">
+		<div class="col-md-6" ng-class="{ 'col-md-offset-3' : vm.isGovernor }">
 
-			<div id="agenda-list-container">
-				<div id="agenda-list" class="list-group">
-					<div
-							class="list-group-item"
-							ng-repeat="item in vm.currentSeating.items"
-							ng-class="{ 'active' : item.id == vm.currentSeating.current_item, 'passed' : item.hasPassed, 'hasSeparateHeader' : item.showSeparateHeader, 'isSeparateItem' : item.separate_list == '1' }"
-							id="item-{{ item.id }}"
-					>
-						<span class="counter">{{ item.idx }}</span>
-						<h3 class="list-group-item-heading">{{ item.case.title }}</h3>
-						<h4 class="list-group-item-text">{{ item.case.code }} | {{ item.type.title }}</h4>
-						<h4 ng-repeat="doc in item.case.document"
-							ng-click="vm.openDocument(doc)"
-							class="list-group-item-text link-style">
-							<i class="fa fa-file"></i> {{ doc.title }}
-						</h4>
-
-					</div>
-				</div>
-			</div>
+			<div id="agenda-list" ng-include="'/view/templates/agenda.tpl.html'"></div>
 
 		</div>
 
-		<div class="col-md-6">
+		<div class="col-md-6" ng-if="!vm.isGovernor">
 
 			<div class="flex-column" ng-if="!vm.showCancelSpeech && vm.seatingActive">
 				<button

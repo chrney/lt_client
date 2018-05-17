@@ -4,8 +4,13 @@
   angular
 	.module('view', [
 		'rest',
-		'ui-notification',
-		'generic',
+		'angular-loading-bar',
+		'ws',
+		'ngAnimate',
+		'ngCookies',
+		'ngSanitize',
+		'rest',
+		'login',
 		'oc.modal',
 	]);
 

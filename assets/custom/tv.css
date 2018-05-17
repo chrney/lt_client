@@ -1,0 +1,271 @@
+
+.tv #wrapper {
+    height: 100%;
+}
+
+.tv .col-md-12 {
+    height: 100%;
+}
+
+.tv .col-md-12 > div:nth-last-child(1) {
+    height: 100%;
+}
+
+.tv .flex-column {
+    flex-flow: column nowrap;
+}
+
+.margin-top-5 {
+    margin-top: 5px;
+}
+
+.margin-top-10 {
+    margin-top: 10px;
+}
+
+/***************************/
+
+.header h1 {
+    font-size: 3.5em;
+    font-weight: 200;
+    letter-spacing: 2px;
+}
+
+.header h2 {
+    font-weight: 100;
+    text-transform: uppercase;
+    font-size: 2.30em;
+    margin: 0 auto 2vh;
+    letter-spacing: 3px;
+    opacity: 0.9;
+}
+
+.border-bottom {
+    border-bottom: 2px solid grey;
+}
+
+/***************************/
+
+.numbers {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+}
+
+.number {
+    border-left: 2px solid;
+    border-right: 2px solid;
+    width: 80%;
+    max-width: 450px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.numbers h1 {
+    font-size: 5.7em;
+}
+
+.numbers h2 {
+    font-size: 2.0em; /* 40px */
+    text-transform: uppercase;
+    font-weight: 100;
+}
+
+/***************************/
+
+.seating-map {
+    position: relative;
+    min-height: 370px;
+    width: 100%;
+    margin: 50px auto;
+}
+
+.seating-row {
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    left: 50%;
+    margin: -25px;
+    border: 1px solid #7a8288;
+}
+
+.seating-row0 {
+    top:5%;
+}
+
+/* SPARAS IFALL VI VILL MÄRKA UT TALMANNEN I KARTAN
+.is-speaker {
+    border: 2px solid white;
+    border-radius: 0%;
+}
+
+#ring {
+    width: 50px;
+    height: 50px;
+    display: inline-block;
+    margin-bottom: -15px;
+    border-radius: 0%;
+}
+*/
+
+.red {
+    background-color: #ee5f5b;
+}
+.green {
+    background-color: #62c462;
+}
+.grey {
+    background-color: #7A8288;
+}
+
+.map-voting .not-attending {
+    opacity: 0.2;
+}
+
+/***************************/
+
+.footer {
+    font-size: 2.1em;
+    font-weight: 100;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: #7a8288;
+}
+
+.footer span {
+    font-size: 1.1em;
+    display: block;
+    opacity: 1;
+    color: rgb(200, 200, 200);
+}
+
+
+/*********************/
+
+.tv .speakers-list {
+    margin-top: 20px;
+}
+
+.tv .speakers-list .list-group-item {
+    font-size: 2em;
+    margin-bottom: 5px;
+    position: relative;
+}
+
+.tv .speakers-list .list-group-item.spoken {
+    opacity: 0.3;
+    border-left: 6px solid #62c462;
+}
+
+.tv .speakers-list .list-group-item.active {
+    opacity: 1.0;
+    border-left: 6px solid #62c462;
+}
+
+.tv .speakers-list .list-group-item.group {
+    padding-top: 40px;
+    border-left: 4px solid #7A8288;
+}
+
+.tv .speakers-list .list-group-item.group:before {
+    content: 'Gruppanförande';
+    position: absolute;
+    top: 10px;
+    font-size: 0.7em;
+    text-transform: uppercase;
+    font-weight: 100;
+    letter-spacing: 2px;
+}
+
+.timerbar {
+    height: 30px;
+    font-size: 2em;
+    margin-top: 20px;
+}
+
+.timerbar strong {
+    font-weight: 100;
+}
+
+.timerbar .progress {
+    height: 100%;
+    margin: 10px 0;
+}
+
+.next-case {
+    position: absolute;
+    bottom: 0;
+    font-size: 1.7em;
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+    z-index: -1;
+    letter-spacing: 1px;
+}
+
+.next-case span {
+    display: block;
+    opacity: 0.8;
+    text-transform: uppercase;
+    font-weight: 100;
+    letter-spacing: 2px;
+}
+
+/*********************/
+
+.progress-item {
+    height: 7px;
+    background: #7A8288;
+    flex: 1 1 auto;
+    margin: 15px 5px 0;
+    opacity: 0.7;
+}
+
+.progress-item:first-child {
+    margin-left: 0;
+}
+
+.progress-item:last-child {
+    margin-right: 0;
+}
+
+.progress-item.active {
+    background: #62c462;
+}
+
+
+/*********************/
+
+@media (min-width: 1920px) { /* VIDEO PC : 1920x1080 */
+    body {
+        font-size: 24px;
+    }
+
+    h1 {
+        font-size: 2.5em;
+    }
+
+    .page-title {
+        font-weight: 100;
+        text-transform: uppercase;
+        font-size: 3em;
+    }
+
+    .seating-map {
+        min-height: 260px;
+        margin-top: 10px;
+    }
+
+    .seating-row span {
+        font-size: 0.5em;
+        display: block;
+        margin-left: 25%;
+        margin-top: 50%;
+        transform-origin: center;
+
+    }
+
+}

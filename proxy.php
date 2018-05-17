@@ -114,14 +114,13 @@ $thisDocument = $docInstance->getFile($_GET['file']);
 	<head>
 
 		<style>
-			<?=$thisDocument['css'];?>
+			<?php print $thisDocument['css']; ?>
 
 			body {
 				zoom: 150%;
 
 				-webkit-touch-callout: none; /* iOS Safari */
 				-webkit-user-select: none; /* Safari */
-				-khtml-user-select: none; /* Konqueror HTML */
 				-moz-user-select: none; /* Firefox */
 				-ms-user-select: none; /* Internet Explorer/Edge */
 				user-select: none; /* Non-prefixed version, currently supported by Chrome and Opera */
@@ -149,7 +148,7 @@ $thisDocument = $docInstance->getFile($_GET['file']);
 
 	<body>
 
-		<?=$thisDocument['content'];?>
+		<?php print $thisDocument['content']; ?>
 
 		<script>
 			document.addEventListener('contextmenu', event => event.preventDefault());

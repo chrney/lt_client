@@ -4,16 +4,67 @@
     <option name="SCOPE_TYPE" value="3" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3d2007c6-eeb4-4747-8e8a-69cd6f4758c5" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/custom/client.css" afterPath="$PROJECT_DIR$/assets/custom/client.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.php" afterPath="$PROJECT_DIR$/index.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/proxy.php" afterPath="$PROJECT_DIR$/proxy.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view/main.tpl.html" afterPath="$PROJECT_DIR$/view/main.tpl.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view/topnav.controller.js" afterPath="$PROJECT_DIR$/view/topnav.controller.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view/view.controller.js" afterPath="$PROJECT_DIR$/view/view.controller.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view/view.run.js" afterPath="$PROJECT_DIR$/view/view.run.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view/view.service.js" afterPath="$PROJECT_DIR$/view/view.service.js" />
+    <list default="true" id="3d2007c6-eeb4-4747-8e8a-69cd6f4758c5" name="Default" comment="Latest changes.">
+      <change afterPath="$PROJECT_DIR$/assets/custom/speaker.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/custom/tv.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/view/templates/agenda.tpl.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/view/templates/seat-map.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/view/templates/speaker.tpl.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/view/templates/timer.tpl.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/view/templates/tv.tpl.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/view/view.client.controller.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/view/view.config.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/view/view.constants.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/view/view.directives.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/view/view.filters.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/view/view.speaker.controller.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/OLDclient/client.generic/client.generic.module.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/OLDclient/client.generic/client.generic.run.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/OLDclient/client.generic/client.generic.service.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/OLDclient/client.helper/helper.controller.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/OLDclient/client.helper/helper.module.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/OLDclient/client.helper/helper.service.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/OLDclient/client.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/OLDclient/client.main/___center.main.controller.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/OLDclient/client.main/___center.tpl.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/OLDclient/client.main/___left.main.controller.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/OLDclient/client.main/___right.main.controller.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/OLDclient/client.main/___right.tpl.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/OLDclient/client.main/attendance.tpl.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/OLDclient/client.main/document.tpl.html" beforeDir="false" afterPath="$PROJECT_DIR$/view/templates/document.tpl.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/OLDclient/client.main/left.tpl.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/OLDclient/client.main/main.controller.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/OLDclient/client.main/main.module.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/OLDclient/client.main/main.tpl.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/OLDclient/client.main/voting.tpl.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/OLDclient/client.topnav/topnav.controller.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/OLDclient/client.topnav/topnav.module.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/angular-ui-notification.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/angular-ui-notification.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/angular-ui-notification.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/angular-ui-notification.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/custom/client.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/custom/client.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/custom/common.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/custom/common.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/generic/generic.config.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/generic/generic.constants.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/generic/generic.filter.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/generic/generic.module.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/generic/generic.run.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/generic/generic.service.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/generic/ws/ws.module.js" beforeDir="false" afterPath="$PROJECT_DIR$/ws/ws.module.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/generic/ws/ws.service.js" beforeDir="false" afterPath="$PROJECT_DIR$/ws/ws.service.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/proxy.php" beforeDir="false" afterPath="$PROJECT_DIR$/proxy.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/attendance.tpl.html" beforeDir="false" afterPath="$PROJECT_DIR$/view/templates/attendance.tpl.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/document.tpl.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/main.tpl.html" beforeDir="false" afterPath="$PROJECT_DIR$/view/templates/client.tpl.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/topnav.controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/view/topnav.controller.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/view.controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/view/view.tv.controller.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/view.module.js" beforeDir="false" afterPath="$PROJECT_DIR$/view/view.module.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/view.run.js" beforeDir="false" afterPath="$PROJECT_DIR$/view/view.run.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/view.service.js" beforeDir="false" afterPath="$PROJECT_DIR$/view/view.service.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/voting.tpl.html" beforeDir="false" afterPath="$PROJECT_DIR$/view/templates/voting.tpl.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -30,92 +81,38 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="view.controller.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/view/view.controller.js">
+      <file leaf-file-name="view.speaker.controller.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/view/view.speaker.controller.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="903">
-              <caret line="292" column="0" lean-forward="false" selection-start-line="275" selection-start-column="0" selection-end-line="292" selection-end-column="0" />
-              <folding />
+            <state relative-caret-position="252">
+              <caret line="125" column="34" selection-start-line="125" selection-start-column="34" selection-end-line="125" selection-end-column="34" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="view.service.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/view/view.service.js">
+      <file leaf-file-name="speaker.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/assets/custom/speaker.css">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file leaf-file-name="view.config.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/view/view.config.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="485">
-              <caret line="424" column="19" lean-forward="true" selection-start-line="424" selection-start-column="19" selection-end-line="424" selection-end-column="19" />
-              <folding />
+            <state relative-caret-position="288">
+              <caret line="16" column="1" lean-forward="true" selection-start-line="16" selection-start-column="1" selection-end-line="16" selection-end-column="1" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="main.tpl.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/view/main.tpl.html">
+      <file leaf-file-name="speaker.tpl.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/view/templates/speaker.tpl.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="796">
-              <caret line="57" column="22" lean-forward="true" selection-start-line="57" selection-start-column="22" selection-end-line="57" selection-end-column="22" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="client.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/assets/custom/client.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="427">
-              <caret line="96" column="8" lean-forward="false" selection-start-line="96" selection-start-column="1" selection-end-line="96" selection-end-column="8" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="view.run.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/view/view.run.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="20" column="0" lean-forward="false" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/index.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="554">
-              <caret line="45" column="53" lean-forward="false" selection-start-line="45" selection-start-column="53" selection-end-line="45" selection-end-column="53" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="topnav.controller.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/view/topnav.controller.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="504">
-              <caret line="28" column="30" lean-forward="false" selection-start-line="28" selection-start-column="30" selection-end-line="28" selection-end-column="30" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="view.module.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/view/view.module.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="162">
-              <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/.gitignore">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="18">
-              <caret line="1" column="0" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-              <folding />
+            <state relative-caret-position="450">
+              <caret line="25" column="131" selection-start-line="25" selection-start-column="131" selection-end-line="25" selection-end-column="131" />
+              <folding>
+                <element signature="e#1967#1973#0" expanded="true" />
+                <element signature="e#2379#2385#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -126,41 +123,42 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="CSS File" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>contains</find>
-      <find>href</find>
-      <find>setbuttons</find>
-      <find>service.min</find>
-      <find>setspeak</find>
-      <find>setseat</find>
-      <find>service.mode</find>
-      <find>service.user.person</find>
-      <find>setbutton</find>
-      <find>.type</find>
-      <find>217</find>
-      <find>getminist</find>
-      <find>ministers</find>
-      <find>request</find>
-      <find>questionsTarget</find>
-      <find>list</find>
-      <find>sendVote</find>
-      <find>4</find>
-      <find>setSeating</find>
-      <find>currentVoting</find>
-      <find>#ECE</find>
-      <find>changed</find>
-      <find>center-</find>
-      <find>check_un</find>
-      <find>BUTTONS</find>
-      <find>ani</find>
-      <find>voting_sta</find>
-      <find>seatingActive</find>
+      <find>config</find>
+      <find>countrepl</find>
+      <find>truncate</find>
+      <find>responsible</find>
+      <find>striphtml</find>
+      <find>inpercent</find>
+      <find>secondstodate</find>
+      <find>animate</find>
+      <find>cooki</find>
+      <find>generic</find>
+      <find>.tpl</find>
+      <find>tpl</find>
+      <find>view/templates</find>
+      <find>console.</find>
+      <find>seat-</find>
+      <find>logo</find>
+      <find>attendanceStatesWithIdAsKeys</find>
+      <find>group</find>
+      <find>viewService:attendance_check_state</find>
       <find>setmode</find>
-      <find>vm.atte</find>
+      <find>currentSpea</find>
+      <find>inget plenum</find>
+      <find>nästa</find>
+      <find>minister</find>
+      <find>type</find>
+      <find>setbutton</find>
+      <find>person.id</find>
+      <find>lind</find>
+      <find>user</find>
+      <find>0</find>
     </findStrings>
     <replaceStrings>
       <replace>generateButtons</replace>
@@ -170,11 +168,11 @@
       <replace>dj</replace>
       <replace>client.generic:setSeating</replace>
       <replace>dj.generic:setSeating</replace>
+      <replace>,</replace>
     </replaceStrings>
     <dirStrings>
       <dir>$PROJECT_DIR$/</dir>
       <dir>$PROJECT_DIR$/app</dir>
-      <dir>$PROJECT_DIR$/assets</dir>
       <dir>'seatings</dir>
       <dir>seatings</dir>
       <dir>$PROJECT_DIR$/generic</dir>
@@ -182,8 +180,9 @@
       <dir>$PROJECT_DIR$/client/client.main</dir>
       <dir>$PROJECT_DIR$/client</dir>
       <dir>$PROJECT_DIR$/OLDclient</dir>
-      <dir>$PROJECT_DIR$</dir>
+      <dir>$PROJECT_DIR$/assets</dir>
       <dir>$PROJECT_DIR$/view</dir>
+      <dir>$PROJECT_DIR$</dir>
     </dirStrings>
   </component>
   <component name="Git.Settings">
@@ -192,38 +191,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/client/client.helper/helper.controller.js" />
-        <option value="$PROJECT_DIR$/client/client.helper/helper.module.js" />
-        <option value="$PROJECT_DIR$/client/client.main/main.module.js" />
-        <option value="$PROJECT_DIR$/client/client.topnav/topnav.module.js" />
-        <option value="$PROJECT_DIR$/dj/client.generic/client.generic.module.js" />
-        <option value="$PROJECT_DIR$/dj/dj.generic/client.generic.run.js" />
-        <option value="$PROJECT_DIR$/generic/ws/ws.module.js" />
-        <option value="$PROJECT_DIR$/client/client.main/center.main.controller.js" />
-        <option value="$PROJECT_DIR$/client/client.main/right.tpl.html" />
-        <option value="$PROJECT_DIR$/client/client.generic/client.generic.run.js" />
-        <option value="$PROJECT_DIR$/dj/dj.generic/dj.generic.run.js" />
-        <option value="$PROJECT_DIR$/dj/dj.main/center.main.controller.js" />
-        <option value="$PROJECT_DIR$/client/client.main/right.main.controller.js" />
-        <option value="$PROJECT_DIR$/dj/dj.main/right.tpl.html" />
-        <option value="$PROJECT_DIR$/dj/dj.main/right.main.controller.js" />
-        <option value="$PROJECT_DIR$/generic/ws/ws.service.js" />
-        <option value="$PROJECT_DIR$/dj/dj.main/main.module.js" />
-        <option value="$PROJECT_DIR$/assets/custom/dj.css" />
-        <option value="$PROJECT_DIR$/dj.php" />
-        <option value="$PROJECT_DIR$/dj/dj.main/left.tpl.html" />
-        <option value="$PROJECT_DIR$/dj/dj.generic/dj.generic.service.js" />
-        <option value="$PROJECT_DIR$/dj/dj.main/left.main.controller.js" />
-        <option value="$PROJECT_DIR$/assets/custom/common.css" />
-        <option value="$PROJECT_DIR$/client/client.js" />
-        <option value="$PROJECT_DIR$/assets/custom/client.css" />
-        <option value="$PROJECT_DIR$/assets/angular-ocModal.js" />
-        <option value="$PROJECT_DIR$/.gitignore" />
-        <option value="$PROJECT_DIR$/client/client.main/center.tpl.html" />
-        <option value="$PROJECT_DIR$/client/client.helper/helper.service.js" />
-        <option value="$PROJECT_DIR$/proxy.php" />
-        <option value="$PROJECT_DIR$/client/client.topnav/topnav.controller.js" />
-        <option value="$PROJECT_DIR$/client/client.main/left.main.controller.js" />
         <option value="$PROJECT_DIR$/client/client.main/voting.tpl.html" />
         <option value="$PROJECT_DIR$/client/client.main/document.tpl.html" />
         <option value="$PROJECT_DIR$/client/client.main/attendance.tpl.html" />
@@ -233,49 +200,87 @@
         <option value="$PROJECT_DIR$/client/client.main/main.controller.js" />
         <option value="$PROJECT_DIR$/client/client.main/left.tpl.html" />
         <option value="$PROJECT_DIR$/generic/generic.service.js" />
-        <option value="$PROJECT_DIR$/generic/generic.module.js" />
         <option value="$PROJECT_DIR$/view/attendance.tpl.html" />
-        <option value="$PROJECT_DIR$/view/voting.tpl.html" />
-        <option value="$PROJECT_DIR$/view/view.run.js" />
-        <option value="$PROJECT_DIR$/view/view.module.js" />
-        <option value="$PROJECT_DIR$/view/topnav.controller.js" />
-        <option value="$PROJECT_DIR$/index.php" />
+        <option value="$PROJECT_DIR$/generic/ws/ws.service.js" />
+        <option value="$PROJECT_DIR$/assets/custom/tv.css" />
+        <option value="$PROJECT_DIR$/view/tv-voting.html" />
+        <option value="$PROJECT_DIR$/view/tv-attendance.html" />
+        <option value="$PROJECT_DIR$/view/seat-map.html" />
+        <option value="$PROJECT_DIR$/view/timer.tpl.html" />
+        <option value="$PROJECT_DIR$/view/tv.tpl.html" />
         <option value="$PROJECT_DIR$/view/main.tpl.html" />
-        <option value="$PROJECT_DIR$/view/view.service.js" />
+        <option value="$PROJECT_DIR$/view/agenda.tpl.html" />
+        <option value="$PROJECT_DIR$/view/voting.tpl.html" />
         <option value="$PROJECT_DIR$/view/view.controller.js" />
+        <option value="$PROJECT_DIR$/tv.php" />
+        <option value="$PROJECT_DIR$/test.php" />
+        <option value="$PROJECT_DIR$/speaker.php" />
+        <option value="$PROJECT_DIR$/Gruntfile" />
+        <option value="$PROJECT_DIR$/Gruntfile.js" />
+        <option value="$PROJECT_DIR$/framework.inc.php" />
+        <option value="$PROJECT_DIR$/.htaccess" />
+        <option value="$PROJECT_DIR$/view/speaker.tpl.html" />
+        <option value="$PROJECT_DIR$/generic/generic.config.js" />
+        <option value="$PROJECT_DIR$/generic/generic.filter.js" />
+        <option value="$PROJECT_DIR$/generic/generic.module.js" />
+        <option value="$PROJECT_DIR$/view/view.filters.js" />
+        <option value="$PROJECT_DIR$/view/view.module.js" />
+        <option value="$PROJECT_DIR$/view/view.run.js" />
+        <option value="$PROJECT_DIR$/view/view.constants.js" />
+        <option value="$PROJECT_DIR$/view/templates/tv.tpl.html" />
+        <option value="$PROJECT_DIR$/view/templates/seat-map.html" />
+        <option value="$PROJECT_DIR$/view/view.config.js" />
+        <option value="$PROJECT_DIR$/view/view.directives.js" />
+        <option value="$PROJECT_DIR$/view/topnav.controller.js" />
+        <option value="$PROJECT_DIR$/assets/custom/client.css" />
+        <option value="$PROJECT_DIR$/proxy.php" />
+        <option value="$PROJECT_DIR$/index.php" />
+        <option value="$PROJECT_DIR$/view/view.client.controller.js" />
+        <option value="$PROJECT_DIR$/view/templates/client.tpl.html" />
+        <option value="$PROJECT_DIR$/view/view.service.js" />
+        <option value="$PROJECT_DIR$/ws/ws.service.js" />
+        <option value="$PROJECT_DIR$/view/view.tv.controller.js" />
+        <option value="$PROJECT_DIR$/view/templates/speaker.tpl.html" />
+        <option value="$PROJECT_DIR$/view/view.speaker.controller.js" />
       </list>
     </option>
   </component>
   <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
   <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsFlowSettings">
+    <service-enabled>true</service-enabled>
+    <exe-path />
+    <other-services-enabled>true</other-services-enabled>
+    <auto-save>true</auto-save>
+  </component>
   <component name="JsGulpfileManager">
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="379" />
-    <option name="y" value="74" />
-    <option name="width" value="2018" />
-    <option name="height" value="1370" />
+  <component name="NodeModulesDirectoryManager">
+    <handled-path value="$PROJECT_DIR$/node_modules" />
   </component>
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="NodePackageJsonFileManager">
+    <packageJsonPaths>
+      <path value="$PROJECT_DIR$/package.json" />
+    </packageJsonPaths>
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="x" value="714" />
+    <option name="y" value="102" />
+    <option name="width" value="1989" />
+    <option name="height" value="1381" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectView">
-    <navigator currentView="ProjectPane" proportions="" version="1">
-      <flattenPackages />
+    <navigator proportions="" version="1">
       <showMembers ProjectPane="true" />
-      <showModules />
-      <showLibraryContents />
-      <hideEmptyPackages />
-      <abbreviatePackageNames />
-      <autoscrollToSource />
-      <autoscrollFromSource />
-      <sortByType />
-      <manualOrder />
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
       <pane id="Scope" />
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -297,18 +302,24 @@
             <path>
               <item name="client" type="b2602c69:ProjectViewProjectNode" />
               <item name="client" type="462c0819:PsiDirectoryNode" />
-              <item name="generic" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="client" type="b2602c69:ProjectViewProjectNode" />
-              <item name="client" type="462c0819:PsiDirectoryNode" />
-              <item name="generic" type="462c0819:PsiDirectoryNode" />
-              <item name="ws" type="462c0819:PsiDirectoryNode" />
+              <item name="assets" type="462c0819:PsiDirectoryNode" />
+              <item name="images" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="client" type="b2602c69:ProjectViewProjectNode" />
               <item name="client" type="462c0819:PsiDirectoryNode" />
               <item name="view" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="client" type="b2602c69:ProjectViewProjectNode" />
+              <item name="client" type="462c0819:PsiDirectoryNode" />
+              <item name="view" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="client" type="b2602c69:ProjectViewProjectNode" />
+              <item name="client" type="462c0819:PsiDirectoryNode" />
+              <item name="ws" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -317,25 +328,28 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="nodejs_interpreter_path" value="/usr/local/bin/node" />
-    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="HbShouldOpenHtmlAsHb" value="" />
-    <property name="list.type.of.created.stylesheet" value="CSS" />
-    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="jsx.switch.disabled" value="true" />
-    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.General" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
+    <property name="nodejs_interpreter_path" value="/usr/local/bin/node" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
+    <property name="settings.editor.selected.configurable" value="Settings.JavaScript.Linters.JSHint" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/view/templates" />
+      <recent name="$PROJECT_DIR$/generic" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/view" />
       <recent name="$PROJECT_DIR$/client/client.main" />
-      <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/assets" />
       <recent name="$PROJECT_DIR$/" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/generic" />
-      <recent name="$PROJECT_DIR$" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -350,7 +364,10 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Node.js.client.generic.service.js">
+  <component name="RunManager" selected="JavaScript Debug.index.php">
+    <configuration name="attendance.tpl.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://view.lagtinget.ax/view/templates/attendance.tpl.html" />
+    <configuration name="index.php" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://view.lagtinget.ax/index.php" />
+    <configuration name="client.generic.service.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" path-to-js-file="$PROJECT_DIR$/OLDclient/client.generic/client.generic.service.js" working-dir="$PROJECT_DIR$/OLDclient/client.generic" />
     <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
       <node-interpreter>project</node-interpreter>
       <node-options />
@@ -359,72 +376,18 @@
       <arguments />
       <envs />
     </configuration>
-    <configuration default="true" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
-      <method />
-    </configuration>
-    <configuration default="true" type="DartTestRunConfigurationType" factoryName="Dart Test">
-      <method />
-    </configuration>
-    <configuration default="true" type="JavaScriptTestRunnerJest" factoryName="Jest">
-      <node-interpreter value="project" />
-      <working-dir value="" />
-      <envs />
-      <scope-kind value="ALL" />
-      <method />
-    </configuration>
-    <configuration default="true" type="JavaScriptTestRunnerKarma" factoryName="Karma">
-      <config-file value="" />
-      <node-interpreter value="project" />
-      <envs />
-      <method />
-    </configuration>
-    <configuration default="true" type="JavaScriptTestRunnerProtractor" factoryName="Protractor">
-      <config-file value="" />
-      <node-interpreter value="project" />
-      <envs />
-      <method />
-    </configuration>
-    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
-      <method />
-    </configuration>
-    <configuration default="true" type="NodeJSConfigurationType" factoryName="Node.js" path-to-node="project" working-dir="">
-      <method />
-    </configuration>
-    <configuration default="true" type="cucumber.js" factoryName="Cucumber.js">
-      <option name="cucumberJsArguments" value="" />
-      <option name="executablePath" />
-      <option name="filePath" />
-      <method />
-    </configuration>
-    <configuration default="true" type="js.build_tools.npm" factoryName="npm">
-      <command value="run" />
-      <scripts />
-      <node-interpreter value="project" />
-      <envs />
-      <method />
-    </configuration>
-    <configuration default="true" type="mocha-javascript-test-runner" factoryName="Mocha">
-      <node-interpreter>project</node-interpreter>
-      <node-options />
-      <working-directory />
-      <pass-parent-env>true</pass-parent-env>
-      <envs />
-      <ui />
-      <extra-mocha-options />
-      <test-kind>DIRECTORY</test-kind>
-      <test-directory />
-      <recursive>false</recursive>
-      <method />
-    </configuration>
-    <configuration name="client.generic.service.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" path-to-node="project" path-to-js-file="$PROJECT_DIR$/OLDclient/client.generic/client.generic.service.js" working-dir="$PROJECT_DIR$/OLDclient/client.generic" />
+    <list>
+      <item itemvalue="Node.js.client.generic.service.js" />
+      <item itemvalue="JavaScript Debug.attendance.tpl.html" />
+      <item itemvalue="JavaScript Debug.index.php" />
+    </list>
     <recent_temporary>
-      <list size="1">
-        <item index="0" class="java.lang.String" itemvalue="Node.js.client.generic.service.js" />
+      <list>
+        <item itemvalue="JavaScript Debug.index.php" />
+        <item itemvalue="JavaScript Debug.attendance.tpl.html" />
+        <item itemvalue="Node.js.client.generic.service.js" />
       </list>
     </recent_temporary>
-  </component>
-  <component name="ShelveChangesManager" show_recycled="false">
-    <option name="remove_strategy" value="false" />
   </component>
   <component name="SvnConfiguration">
     <configuration>$USER_HOME$/.subversion</configuration>
@@ -470,54 +433,50 @@
       <workItem from="1505452179659" duration="113000" />
       <workItem from="1522048548341" duration="2722000" />
       <workItem from="1522064990191" duration="33222000" />
-      <workItem from="1522728877523" duration="92973000" />
+      <workItem from="1522728877523" duration="172635000" />
+      <workItem from="1525233823012" duration="76000" />
+      <workItem from="1525234340774" duration="64556000" />
+      <workItem from="1526361620072" duration="7700000" />
+      <workItem from="1526462547067" duration="7621000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="359662000" />
+    <option name="totallyTimeSpent" value="519277000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="379" y="74" width="2018" height="1370" extended-state="0" />
-    <editor active="true" />
+    <frame x="714" y="102" width="1989" height="1381" extended-state="0" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.13570355" sideWeight="0.75021535" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32893288" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32784313" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="File Transfer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.38980392" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3298791" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.16" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24962999" sideWeight="0.49698535" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32901555" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24962999" sideWeight="0.24978466" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info anchor="bottom" id="TODO" order="7" weight="0.32943925" />
+      <window_info anchor="bottom" id="Messages" weight="0.32943925" />
+      <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.50277996" side_tool="true" weight="0.29912025" />
+      <window_info anchor="bottom" id="File Transfer" order="11" weight="0.078660436" />
+      <window_info anchor="bottom" id="Version Control" order="9" sideWeight="0.49722" weight="0.2990654" />
+      <window_info anchor="bottom" id="Run" order="3" weight="0.32943925" />
+      <window_info anchor="bottom" id="Terminal" order="10" weight="0.32788163" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.7444832" visible="true" weight="0.21087398" />
+      <window_info anchor="bottom" id="Docker" order="0" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Find" order="2" weight="0.3271028" />
+      <window_info id="Structure" order="1" sideWeight="0.25551683" side_tool="true" weight="0.21087398" />
+      <window_info id="Favorites" order="2" sideWeight="0.25551683" side_tool="true" weight="0.21087398" />
+      <window_info anchor="bottom" id="Debug" order="4" weight="0.3995327" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
+      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection Results" order="12" weight="0.32943925" />
+      <window_info anchor="bottom" id="Message" order="1" />
+      <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
     </layout>
-    <layout-to-restore>
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="File Transfer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3293919" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
-    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -525,422 +484,249 @@
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Latest changes." />
+    <option name="LAST_COMMIT_MESSAGE" value="Latest changes." />
+  </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
+      <default-breakpoints>
+        <breakpoint type="dart-exception">
+          <properties />
+        </breakpoint>
+      </default-breakpoints>
       <option name="time" value="4" />
     </breakpoint-manager>
-    <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/dj/dj.generic/dj.generic.run.js">
+    <entry file="file://$PROJECT_DIR$/view/topnav.controller.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="810">
-          <caret line="54" column="13" lean-forward="true" selection-start-line="54" selection-start-column="13" selection-end-line="54" selection-end-column="13" />
+        <state relative-caret-position="972">
+          <caret line="54" column="57" selection-start-line="54" selection-start-column="57" selection-end-line="54" selection-end-column="57" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/dj/dj.main/left.tpl.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1026">
-          <caret line="57" column="12" lean-forward="false" selection-start-line="57" selection-start-column="0" selection-end-line="80" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dj/dj.generic/dj.generic.service.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3546">
-          <caret line="303" column="25" lean-forward="false" selection-start-line="303" selection-start-column="25" selection-end-line="303" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/OLDclient/client.helper/helper.controller.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="468">
-          <caret line="26" column="0" lean-forward="true" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/OLDclient/client.main/___center.main.controller.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="918">
-          <caret line="51" column="0" lean-forward="true" selection-start-line="51" selection-start-column="0" selection-end-line="51" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/OLDclient/client.helper/helper.module.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="4" column="20" lean-forward="false" selection-start-line="4" selection-start-column="20" selection-end-line="4" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/OLDclient/client.main/main.module.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="10" column="0" lean-forward="true" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/custom/common.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1039">
-          <caret line="93" column="0" lean-forward="false" selection-start-line="93" selection-start-column="0" selection-end-line="93" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dj/dj.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="16" column="0" lean-forward="true" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/angular-ocModal.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1682">
-          <caret line="47" column="65" lean-forward="false" selection-start-line="47" selection-start-column="65" selection-end-line="47" selection-end-column="65" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dj.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1003">
-          <caret line="129" column="0" lean-forward="true" selection-start-line="129" selection-start-column="0" selection-end-line="129" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/OLDclient/client.main/___right.tpl.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1152">
-          <caret line="64" column="16" lean-forward="true" selection-start-line="64" selection-start-column="16" selection-end-line="64" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/OLDclient/client.main/___center.tpl.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="720">
-          <caret line="40" column="37" lean-forward="false" selection-start-line="40" selection-start-column="37" selection-end-line="40" selection-end-column="37" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/OLDclient/client.helper/helper.service.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="20" column="14" lean-forward="true" selection-start-line="20" selection-start-column="14" selection-end-line="20" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/OLDclient/client.main/___right.main.controller.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="650">
-          <caret line="196" column="23" lean-forward="false" selection-start-line="186" selection-start-column="20" selection-end-line="196" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/OLDclient/client.main/___left.main.controller.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="19" column="0" lean-forward="false" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/OLDclient/client.main/voting.tpl.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="18">
-          <caret line="1" column="26" lean-forward="false" selection-start-line="1" selection-start-column="26" selection-end-line="1" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dj/dj.main/left.main.controller.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="462">
-          <caret line="319" column="26" lean-forward="false" selection-start-line="319" selection-start-column="26" selection-end-line="319" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/OLDclient/client.main/main.tpl.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="432">
-          <caret line="24" column="0" lean-forward="true" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/OLDclient/client.main/main.controller.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="720">
-          <caret line="40" column="87" lean-forward="false" selection-start-line="40" selection-start-column="69" selection-end-line="40" selection-end-column="87" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/OLDclient/client.main/left.tpl.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="19" column="0" lean-forward="true" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/OLDclient/client.main/attendance.tpl.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="4" column="17" lean-forward="false" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
-          <folding>
-            <element signature="e#106#112#1" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/OLDclient/client.main/document.tpl.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="5" column="26" lean-forward="false" selection-start-line="5" selection-start-column="26" selection-end-line="5" selection-end-column="26" />
-          <folding>
-            <element signature="e#169#176#1" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/OLDclient/client.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="10" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/generic/ws/ws.module.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="54">
-          <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/OLDclient/client.topnav/topnav.module.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="36">
-          <caret line="2" column="25" lean-forward="false" selection-start-line="2" selection-start-column="25" selection-end-line="2" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/OLDclient/client.topnav/topnav.controller.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="504">
-          <caret line="28" column="0" lean-forward="true" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/OLDclient/client.generic/client.generic.module.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="9" column="0" lean-forward="true" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/OLDclient/client.generic/client.generic.run.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="25" column="40" lean-forward="true" selection-start-line="25" selection-start-column="40" selection-end-line="25" selection-end-column="40" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/generic/generic.filter.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1476">
-          <caret line="82" column="0" lean-forward="true" selection-start-line="82" selection-start-column="0" selection-end-line="82" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/generic/generic.constants.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="9" column="0" lean-forward="true" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/generic/generic.config.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="21" column="0" lean-forward="true" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/generic/generic.module.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="10" column="0" lean-forward="true" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="15" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/generic/generic.run.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="468">
-          <caret line="26" column="51" lean-forward="true" selection-start-line="26" selection-start-column="51" selection-end-line="26" selection-end-column="51" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/view/left.tpl.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="7" column="17" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/view/document.tpl.html">
+    <entry file="file://$PROJECT_DIR$/OLDclient/client.main/document.tpl.html" />
+    <entry file="file://$PROJECT_DIR$/OLDclient/client.js" />
+    <entry file="file://$PROJECT_DIR$/OLDclient/client.topnav/topnav.module.js" />
+    <entry file="file://$PROJECT_DIR$/OLDclient/client.topnav/topnav.controller.js" />
+    <entry file="file://$PROJECT_DIR$/OLDclient/client.generic/client.generic.module.js" />
+    <entry file="file://$PROJECT_DIR$/OLDclient/client.generic/client.generic.run.js" />
+    <entry file="file://$PROJECT_DIR$/generic/__generic.run.js" />
+    <entry file="file://$PROJECT_DIR$/view/left.tpl.html" />
+    <entry file="file://$PROJECT_DIR$/view/templates/document.tpl.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="234">
-          <caret line="13" column="0" lean-forward="false" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/view/voting.tpl.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/proxy.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="876">
-          <caret line="150" column="16" lean-forward="true" selection-start-line="150" selection-start-column="16" selection-end-line="150" selection-end-column="16" />
-          <folding />
+          <caret line="13" selection-start-line="13" selection-end-line="13" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="18">
-          <caret line="1" column="0" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-          <folding />
+          <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/OLDclient/client.generic/client.generic.service.js">
+    <entry file="file://$PROJECT_DIR$/OLDclient/client.generic/client.generic.service.js" />
+    <entry file="file://$PROJECT_DIR$/view/templates/attendance.tpl.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="214">
-          <caret line="145" column="12" lean-forward="false" selection-start-line="145" selection-start-column="12" selection-end-line="145" selection-end-column="12" />
-          <folding>
-            <element signature="e#1575#2981#0" expanded="false" />
-          </folding>
+        <state relative-caret-position="162">
+          <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/generic/generic.service.js">
+    <entry file="file://$PROJECT_DIR$/assets/custom/tv.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="271">
-          <caret line="310" column="0" lean-forward="true" selection-start-line="310" selection-start-column="0" selection-end-line="310" selection-end-column="0" />
-          <folding />
+        <state relative-caret-position="359">
+          <caret line="61" column="12" selection-start-line="61" selection-start-column="12" selection-end-line="61" selection-end-column="12" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/generic/ws/ws.service.js">
+    <entry file="file://$PROJECT_DIR$/OLDclient/client.main/main.controller.js" />
+    <entry file="file://$PROJECT_DIR$/view/tv-voting.html" />
+    <entry file="file://$PROJECT_DIR$/view/tv-attendance.html" />
+    <entry file="file://$PROJECT_DIR$/view/templates/timer.tpl.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="341">
-          <caret line="33" column="0" lean-forward="true" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
-          <folding />
+        <state relative-caret-position="216">
+          <caret line="12" column="6" lean-forward="true" selection-start-line="12" selection-start-column="6" selection-end-line="12" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test.php" />
+    <entry file="file://$PROJECT_DIR$/__tv.php" />
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Gruntfile.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="558">
+          <caret line="31" column="28" selection-start-line="31" selection-start-column="23" selection-end-line="31" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/___speaker.php" />
+    <entry file="file://$PROJECT_DIR$/.htaccess">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="5" column="1" selection-start-line="5" selection-start-column="1" selection-end-line="5" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/generic/__generic.service.js" />
+    <entry file="file://$PROJECT_DIR$/generic/__generic.module.js" />
+    <entry file="file://$PROJECT_DIR$/generic/__generic.filter.js" />
+    <entry file="file://$PROJECT_DIR$/generic/__generic.constants.js" />
+    <entry file="file://$PROJECT_DIR$/generic/__generic.config.js" />
+    <entry file="file://$PROJECT_DIR$/view/view.module.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="13" column="19" selection-start-line="13" selection-start-column="19" selection-end-line="13" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/view/view.constants.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ws/ws.module.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="54">
+          <caret line="3" selection-start-line="3" selection-end-line="3" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/view/view.run.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="20" column="0" lean-forward="false" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
-          <folding />
+        <state relative-caret-position="414">
+          <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/view/view.module.js">
+    <entry file="file://$PROJECT_DIR$/view/templates/voting.tpl.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="10" column="123" selection-start-line="10" selection-start-column="123" selection-end-line="10" selection-end-column="123" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/view/templates/seat-map.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="82" selection-start-column="82" selection-end-column="82" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/view/templates/tv.tpl.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="162">
-          <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-          <folding />
+          <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/assets/custom/client.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="427">
-          <caret line="96" column="8" lean-forward="false" selection-start-line="96" selection-start-column="1" selection-end-line="96" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/__framework.inc.php" />
     <entry file="file://$PROJECT_DIR$/view/topnav.controller.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="504">
-          <caret line="28" column="30" lean-forward="false" selection-start-line="28" selection-start-column="30" selection-end-line="28" selection-end-column="30" />
-          <folding />
+        <state relative-caret-position="558">
+          <caret line="31" lean-forward="true" selection-start-line="31" selection-end-line="31" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.php">
+    <entry file="file://$PROJECT_DIR$/view/templates/client.tpl.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="554">
-          <caret line="45" column="53" lean-forward="false" selection-start-line="45" selection-start-column="53" selection-end-line="45" selection-end-column="53" />
-          <folding />
+        <state relative-caret-position="471">
+          <caret line="48" column="38" selection-start-line="48" selection-start-column="38" selection-end-line="48" selection-end-column="38" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/view/main.tpl.html">
+    <entry file="file://$PROJECT_DIR$/view/view.directives.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="796">
-          <caret line="57" column="22" lean-forward="true" selection-start-line="57" selection-start-column="22" selection-end-line="57" selection-end-column="22" />
-          <folding />
+        <state relative-caret-position="918">
+          <caret line="51" column="49" selection-start-line="51" selection-start-column="21" selection-end-line="51" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/view/view.client.controller.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="414">
+          <caret line="23" selection-start-line="23" selection-end-line="23" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/view/view.service.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="485">
-          <caret line="424" column="19" lean-forward="true" selection-start-line="424" selection-start-column="19" selection-end-line="424" selection-end-column="19" />
-          <folding />
+        <state relative-caret-position="437">
+          <caret line="59" column="53" lean-forward="true" selection-start-line="59" selection-start-column="53" selection-end-line="59" selection-end-column="53" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/view/attendance.tpl.html">
+    <entry file="file://$PROJECT_DIR$/ws/ws.service.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="754">
+          <caret line="76" column="18" selection-start-line="76" selection-start-column="18" selection-end-line="76" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/view/view.tv.controller.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="612">
+          <caret line="149" selection-start-line="149" selection-end-line="149" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/custom/client.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="424">
+          <caret line="152" column="4" selection-start-line="152" selection-start-column="4" selection-end-line="152" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/proxy.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="276">
+          <caret line="116" column="38" selection-start-line="116" selection-start-column="38" selection-end-line="116" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="18">
-          <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="3" selection-end-column="10" />
-          <folding />
+          <caret line="42" column="53" selection-start-line="42" selection-start-column="53" selection-end-line="42" selection-end-column="53" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/view/view.controller.js">
+    <entry file="file://$PROJECT_DIR$/view/templates/speaker.tpl.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="903">
-          <caret line="292" column="0" lean-forward="false" selection-start-line="275" selection-start-column="0" selection-end-line="292" selection-end-column="0" />
-          <folding />
+        <state relative-caret-position="450">
+          <caret line="25" column="131" selection-start-line="25" selection-start-column="131" selection-end-line="25" selection-end-column="131" />
+          <folding>
+            <element signature="e#1967#1973#0" expanded="true" />
+            <element signature="e#2379#2385#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/view/view.speaker.controller.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="125" column="34" selection-start-line="125" selection-start-column="34" selection-end-line="125" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/custom/speaker.css">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/view/view.config.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="16" column="1" lean-forward="true" selection-start-line="16" selection-start-column="1" selection-end-line="16" selection-end-column="1" />
         </state>
       </provider>
     </entry>

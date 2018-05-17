@@ -1,0 +1,20 @@
+<div class="list-group">
+	<div
+			class="list-group-item"
+			ng-repeat="item in vm.currentSeating.items"
+			ng-class="{ 'active' : item.id == vm.currentSeating.current_item, 'passed' : item.hasPassed, 'hasSeparateHeader' : item.showSeparateHeader, 'isSeparateItem' : item.separate_list == '1' }"
+			id="item-{{ item.id }}"
+	>
+		<span class="counter">{{ item.idx }}</span>
+		<h3 class="list-group-item-heading">{{ item.case.title }}</h3>
+		<h4 class="list-group-item-text">{{ item.case.code }} | {{ item.type.title }}</h4>
+		<h4 ng-repeat="doc in item.case.document"
+			ng-click="vm.openDocument(doc)"
+			class="list-group-item-text link-style"
+			ng-if="!vm.actsAsSpeaker">
+			<i class="fa fa-file"></i> {{ doc.title }}
+		</h4>
+
+	</div>
+</div>
+			

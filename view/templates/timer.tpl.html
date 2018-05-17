@@ -1,0 +1,13 @@
+<div class="col-xs-2 text-center">
+	<strong><span ng-show="vm.timer.left < 0">-</span>{{ vm.timer.left | secondsToDateTime | date:'m:ss'}}</strong>
+</div>
+
+<div class="col-xs-10">
+	<div class="progress">
+		<span class="progress-bar progress-bar-striped"
+			  ng-class="{ 'active': vm.timer.ticking, 'progress-bar-success': vm.timer.left > 20, 'progress-bar-warning': vm.timer.left > 10 && vm.timer.left <= 20, 'progress-bar-danger': vm.timer.left <= 10 }"
+			  role="progressbar"
+			  ng-style="{ width: vm.timer.percentage + '%'}"
+		>&nbsp;</span>
+	</div>
+</div>

@@ -2,13 +2,12 @@
 	'use strict';
 
   angular
-	.module('view').controller('view.controller', viewControllerFn);
+	.module('view').controller('view.client.controller', viewClientControllerFn);
 
-		viewControllerFn.$inject = [
+		viewClientControllerFn.$inject = [
 		'rest.service',
 		'$scope',
 		'view.service',
-		'Notification',
 		'$rootScope',
 		'$ocModal',
 		'$sce',
@@ -16,7 +15,7 @@
 		'login.service',
 	];
 
-	function viewControllerFn(restService, $scope, viewService, Notification, $rootScope, $ocModal, $sce, appConstants, loginService) {
+	function viewClientControllerFn(restService, $scope, viewService, $rootScope, $ocModal, $sce, appConstants, loginService) {
 
 		var vm = this;
 
@@ -25,6 +24,8 @@
 		$scope.$on('viewService:setSeating', function() {
 			vm.currentSeating = viewService.currentSeating;
 			vm.lockScreen = false;
+
+			vm.isGovernor = viewService.isGovernor;
 
 			if (viewService.seatingActive() && viewService.user.isLedamot && viewService.currentSeating.type == 1) {
 				var check = _.find(vm.currentSeating.attendants, { 'person' : viewService.user.person.id });
@@ -36,7 +37,7 @@
 			vm.seatingActive = viewService.seatingActive();
 
 			setTimeout(function() {
-				scrollToItem(viewService.currentSeating.current_item);
+				viewService.scrollToItem(viewService.currentSeating.current_item);
 			}, 500);
 		});
 
@@ -46,7 +47,7 @@
 
 		$scope.$on('viewService:setCase', function(ev, id) {
 			if (id) {
-				scrollToItem(id);
+				viewService.scrollToItem(id);
 			}
 		});
 
@@ -58,9 +59,12 @@
 			vm.ministers = viewService.ministers;
 		});
 
+		$scope.$on('viewService:setSpeaker', function() {
+			vm.isSpeaker = viewService.isSpeaker;
+		});
+
 		$scope.$on('viewService:setSpeakersList', function() {
 			vm.speakersList = viewService.speakers;
-			console.log('new speakersList', viewService.speakers);
 			var ids = _.map(viewService.speakers, 'id');
 
 			/* hide 'confirm to cancel question'-dialog */
@@ -104,7 +108,6 @@
 				);
 
 			} else {
-				console.log('Återkalla');
 				showCancelDialog(button.id);
 			}
 		};
@@ -161,7 +164,7 @@
 		vm.openDocument = function (obj) {
 			obj.sanitizedPath = $sce.trustAsResourceUrl("https://view.lagtinget.ax/proxy.php?file=" + obj.path);
 			$ocModal.open({
-				url: '/view/document.tpl.html',
+				url: '/view/templates/document.tpl.html',
 				cls: 'fade-in',
 				init: {
 					doc: obj
@@ -172,32 +175,34 @@
 		}
 
 		vm.openVoting = function (obj) {
-			setTimeout(function() {
-				$ocModal.open({
-					url: '/view/voting.tpl.html',
-					cls: 'fade-in',
-					init: {
-						voting: obj,
-						vm : vm,
-					},
 
-					onOpen: function() { }
-				});
-			}, 500);
+			if (!vm.isSpeaker && !vm.lockScreen) {
+
+				setTimeout(function() {
+					$ocModal.open({
+						url: '/view/templates/voting.tpl.html',
+						cls: 'fade-in',
+						init: {
+							vm : vm,
+						},
+
+						onOpen: function() { }
+					});
+				}, 500);
+			}
 		}
 
 		vm.openAttendance = function () {
-			console.error('Modal attendance');
-				$ocModal.open({
-					url: '/view/attendance.tpl.html',
-					cls: 'fade-in',
-					init: {
-						vm: vm,
-					},
+			$ocModal.open({
+				url: '/view/templates/attendance.tpl.html',
+				cls: 'fade-in',
+				init: {
+					vm: vm,
+				},
 
-					onOpen: function () {
-					}
-				});
+				onOpen: function () {
+				}
+			});
 		}
 
 		vm.sendAttendance = function() {
@@ -215,23 +220,17 @@
 
 		}
 
-		function scrollToItem(id) {
-
-			if (id) {
-				var foundItem = document.getElementById("item-" + id);
-				if (!_.isNull(foundItem)) {
-					document.getElementById('agenda-list-container').scrollTop = foundItem.offsetTop;
-				}
-			}
-		}
-
 		vm.sendVote = function(vote) {
-			restService.post('votings/' + vm.currentVoting.id + '/vote', {
-				'person' : loginService.currentUser.member.id,
-				'vote' : vote.id
-			}, {
-				'X-CSRF-Token' : loginService.getToken(),
-			});
+			if (vm.currentVoting.myVote != vote.id) {
+				restService.post('votings/' + vm.currentVoting.id + '/vote', {
+				/*	'person' : loginService.currentUser.member.id,*/
+					'vote' : vote.id
+				}, {
+					'X-CSRF-Token' : loginService.getToken(),
+				});
+			}
+			vm.currentVoting.myVote = vote.id;
+
 		};
 
 		$rootScope.$on('ws:user_vote_added', function(ev, response) {
@@ -251,7 +250,11 @@
 				return;
 			}
 
-			if (vm.mode == 'vote' && viewService.user.isLedamot && !viewService.user.mustCheckin) {
+			if (vm.mode == 'vote'
+				&& viewService.user.isLedamot
+				&& !viewService.user.mustCheckin
+				&& viewService.seatingActive()
+			) {
 				restService.get('votings').one(response.data.id).get().then(function (votingResponse) {
 					response.data = votingResponse.plain();
 
@@ -274,14 +277,16 @@
 				return;
 			}
 
-			if (vm.mode == 'attendance' && viewService.user.mustCheckin) {
+			if (vm.mode == 'attendance'
+				&& viewService.user.mustCheckin
+				&& viewService.seatingActive()
+			) {
 				vm.attendance = response.data;
 				var thisCheck = _.find(viewService.currentSeating.attendants, {'person': viewService.user.person.id});
 				if (thisCheck.type == '163' || thisCheck.type == '159') { /* already checked in */
 					viewService.user.mustCheckin = false;
 					viewService.setMode('', {});
 				} else {
-					console.error('Not checked in before');
 					viewService.user.mustCheckin = true;
 					vm.openAttendance();
 				}
@@ -305,7 +310,7 @@
 		});
 
 
-		}
+	}
 
 }
 )();

@@ -1,0 +1,90 @@
+
+<!-- show some hours before -->
+<script type="text/ng-template" id="not-active.html">
+
+	<h1><span ng-if="vm.currentSeating.type == 1">Plenum</span><span ng-if="vm.currentSeating.type == 2">Frågestunden</span> börjar kl. {{ vm.currentSeating.ts | date : "HH:mm" }}</h1>
+
+</script>
+
+<!-- lock screen -->
+<div class="center-content" ng-if="vm.lockScreen">
+	<img class="img-responsive center-block" src="../../assets/images/logo_grey.png" width="400" height="400" alt="logo">
+</div>
+
+<!-- main screen -->
+<div class="row no-gutter" ng-if="!vm.lockScreen">
+
+	<div class="col-md-6">
+
+		<div ng-show="vm.mode == ''" id="agenda-list" ng-include="'/view/templates/agenda.tpl.html'"></div>
+		<div class="col-md-12" ng-show="vm.mode == 'vote'">
+			<!--<h2>Omröstning</h2>-->
+			<div id="voting-results">
+				<div class="col-md-3"><div class="panel panel-success text-center text-success"><h3>Ja</h3><strong>{{ vm.numbers['1'].length || 0 }}</strong></div></div>
+				<div class="col-md-3"><div class="panel panel-danger text-center text-danger"><h3>Nej</h3><strong>{{ vm.numbers['2'].length || 0 }}</strong></div></div>
+				<div class="col-md-3"><div class="panel panel-warning text-center text-muted"><h3>Avstår</h3><strong>{{ vm.numbers['0'].length || 0 }}</strong></div></div>
+				<div class="col-md-3"><div class="panel panel-warning text-center"><h3>Ej röstat</h3><strong>{{ vm.votesLeftToCount || 0 }}</strong></div></div>
+			</div>
+
+			<div ng-if="vm.notAttendingCounter > 0" class="text-right">
+				Frånvarande: {{ vm.notAttendingCounter }}
+			</div>
+
+			<div ng-include="'/view/templates/voting.tpl.html'"></div>
+		</div>
+
+		<div class="col-md-12" ng-show="vm.mode == 'attendance'">
+			<!--<h2>Närvaroregistrering | <span ng-if="vm.modeState == 1">Pågår</span><span ng-if="vm.modeState == 0">Avslutad</span></h2>-->
+
+			<h3>Frånvarande<span class="pull-right text-danger">{{ vm.numbers[2].length || 0 }}&nbsp;<i ng-if="vm.modeState == 1" class="fa fa-spinner fa-pulse fa-fw"></i></span></h3>
+			<ul class="list-group">
+				<li class="list-group-item" ng-repeat="attendant in vm.numbers[2]">
+					{{ attendant.name }} <span class="pull-right">{{ vm.attendanceStatesWithIdAsKeys[attendant.type].title }}</span>
+				</li>
+			</ul>
+
+			<h3>Närvarande<span class="pull-right text-success">{{ vm.numbers[1].length || 0 }}&nbsp;<i ng-if="vm.modeState == 1" class="fa fa-spinner fa-pulse fa-fw"></i></span></h3>
+			<ul class="list-group">
+				<li class="list-group-item" ng-repeat="attendant in vm.numbers[1]">
+					{{ attendant.name }}
+				</li>
+			</ul>
+		</div>
+
+	</div>
+
+	<div class="col-md-6">
+
+		<div ng-if="vm.seatingActive" class="speakers-list">
+
+			<!--<h2>Talarlistan<span class="current_speaker pull-right">Talman: {{ vm.currentSpeaker.name }}</span></h2>-->
+			<div class="row timerbar" ng-show="vm.timer.ticking" ng-include="'/view/templates/timer.tpl.html'"></div>
+
+			<ul class="list-group" ng-if="vm.speakersList.length > 0">
+				<li
+					class="list-group-item status-{{ speaker.status }} type-{{ speaker.type }} indent-{{ speaker.indent }}"
+					ng-repeat="speaker in vm.speakersList"
+				>
+
+					<strong>{{ speaker.name }}</strong>
+					<small class="pull-right">
+						<span class="replies" ng-if="$first && vm.countReplies > 0">{{ vm.countReplies }} replik<span class="replies" ng-if="vm.countReplies > 1">er</span></span>
+						<span ng-if="!$first || vm.countReplies == 0">{{ vm.speechTypesWithIdAsKeys[speaker.type].title }}</span>
+					</small>
+					<blockquote ng-if="speaker.text.length > 1">{{ speaker.text }}</blockquote>
+				</li>
+			</ul>
+
+			<h4 ng-if="vm.speakersList.length == 0">Talarlistan är tom</h4>
+
+
+		</div>
+
+		<div ng-if="!vm.seatingActive" class="text-center">
+			<h1><span ng-if="vm.currentSeating.type == 1">Plenum</span><span ng-if="vm.currentSeating.type == 2">Frågestunden</span> börjar kl. {{ vm.currentSeating.ts | date : "HH:mm" }}</h1>
+		</div>
+
+	</div>
+
+
+</div>
