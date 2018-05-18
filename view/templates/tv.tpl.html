@@ -31,7 +31,9 @@
 					<h3 class="margin-top-10">{{ vm.currentCase.type.title }}</h3>
 				</div>
 				<div class="col-xs-12">
-					<h2>{{ vm.currentCase.case.title }}</h2>
+					<h2 ng-if="!vm.currentCase.subcase">{{ vm.currentCase.case.title }}</h2>
+					<h2 ng-if="vm.currentCase.subcase">{{ vm.currentCase.subcase }}</h2>
+
 				</div>
 			</div>
 
@@ -52,7 +54,9 @@
 
 			<div class="row next-case" ng-if="vm.speakersList.length < 8 && vm.nextCase.case.title">
 				<div class="col-xs-12">
-					<span>Följande ärende</span>{{ vm.nextCase.case.title }}
+					<span>Följande ärende</span>
+					<strong ng-if="!vm.nextCase.subcase">{{ vm.nextCase.case.title }}</strong>
+					<strong ng-if="vm.nextCase.subcase">{{ vm.nextCase.subcase }}</strong>
 				</div>
 			</div>
 

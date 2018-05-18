@@ -41,7 +41,8 @@
 
 			recalculateAttendance();
 
-		}
+		};
+
 
 		function recalculateAttendance() {
 			vm.numbers = [
@@ -146,11 +147,26 @@
 
 		});
 
+		$scope.$on('viewService:micAutoOffState', function(ev, data) {
+			vm.micAutoOffState = viewService.micAutoOffState;
+			$scope.$apply();
+		});
+
 		$scope.$on('viewService:setTimer', function() {
 			vm.timer = viewService.timer;
 			setTimeout(function() {
 				$scope.$apply();
 			}, 0);
+		});
+
+		$scope.$on('viewService:updatedTimer', function() {
+			if (viewService.timer.left <= 0 && viewService.timer.ticking && vm.micAutoOffState) {
+				restService.post('system/mic_all_delegates_off', {
+					'allMicsOff' : true
+				}, {
+					'X-CSRF-Token' : loginService.getToken(),
+				});
+			}
 		});
 
 		$scope.$on('viewService:setSeating', function() {
@@ -175,8 +191,8 @@
 					viewService.scrollToItem(id);
 				}, 500);
 			}
-
 		});
+
 
 
 		$scope.$on('viewService:setSpeaker', function() {

@@ -90,6 +90,15 @@
 
 					$rootScope.$broadcast('viewService:clientAuthenticated');
 
+					if (service.actsAsSpeaker) {
+						restService.post(
+							'system/mic_auto_off', {},
+							{'X-CSRF-Token': loginService.getToken()}
+						).then(function (result) {
+							service.micAutoOffState = result.plain();
+						});
+					}
+
 					service.getNearestSeating();
 				 });
 
@@ -154,6 +163,13 @@
 					service.currentSeating.attendants = data;
 					$rootScope.$broadcast('viewService:member_registered', data);
 				});
+
+
+				$rootScope.$on('ws:mic_auto_off', function(ev, data) {
+					service.micAutoOffState = data;
+					$rootScope.$broadcast('viewService:micAutoOffState', data);
+				});
+
 
 			 },
 
@@ -237,14 +253,18 @@
 						 return obj;
 					 }
 
-					 var dataPromises = {};
+					 var dataPromises = {}, options = {};
 
 					 _.each(obj.agregateLists, function (subNodeValues, subNodeKeys) {
 						 obj.agregateLists[subNodeKeys] = _.uniq(obj.agregateLists[subNodeKeys]);
 						 if (obj.agregateLists[subNodeKeys].length > 0) {
-							 dataPromises[subNodeKeys] = restService.get(subNodeKeys + '/' + obj.agregateLists[subNodeKeys].join(',') + '?as_array=true&documents=true').getList().then(function (returnData) {
-								 return keysAsId(returnData.plain());
-							 });
+						 	options = { 'as_array' : true };
+						 	if (subNodeKeys === 'cases') {
+						 		options.documents = true;
+							}
+							dataPromises[subNodeKeys] = restService.get(subNodeKeys + '/' + obj.agregateLists[subNodeKeys].join(',')).getList(options).then(function (returnData) {
+								return keysAsId(returnData.plain());
+							});
 						 }
 					 });
 
@@ -271,13 +291,13 @@
 						}
 
 
-						 restService.post(
-							 'system/speakers_list', { },
-							 { 'X-CSRF-Token' : loginService.getToken() }
+						restService.post(
+							'system/speakers_list', { },
+							{ 'X-CSRF-Token' : loginService.getToken() }
 
-						 ).then(function(speakersList) {
-							 service.setSpeakersList(speakersList.plain());
-						 });
+						).then(function(speakersList) {
+							service.setSpeakersList(speakersList.plain());
+						});
 
 
 						service.user.mustCheckin = false;

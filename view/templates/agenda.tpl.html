@@ -6,7 +6,8 @@
 			id="item-{{ item.id }}"
 	>
 		<span class="counter">{{ item.idx }}</span>
-		<h3 class="list-group-item-heading">{{ item.case.title }}</h3>
+		<h3 class="list-group-item-heading" ng-if="item.subcase">{{ item.subcase }}</h3>
+		<h3 class="list-group-item-heading" ng-if="!item.subcase">{{ item.case.title }}</h3>
 		<h4 class="list-group-item-text">{{ item.case.code }} | {{ item.type.title }}</h4>
 		<h4 ng-repeat="doc in item.case.document"
 			ng-click="vm.openDocument(doc)"
@@ -17,4 +18,3 @@
 
 	</div>
 </div>
-			
